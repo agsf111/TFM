@@ -1,0 +1,802 @@
+> summary(fichero1)
+               Date.Time    Drybulb.Temperature Water.Heater.Tank.Temperature Water.Heater.Gas.Rate Supply.Side.Inlet.Mass.Flow.Rate
+ 2016-05-31 00:00:00:   1   Min.   :21.10       Min.   :58.03                 Min.   :    0         Min.   :0.3179                  
+ 2016-05-31 00:05:00:   1   1st Qu.:23.63       1st Qu.:58.65                 1st Qu.:    0         1st Qu.:0.3179                  
+ 2016-05-31 00:10:00:   1   Median :24.73       Median :59.10                 Median :    0         Median :0.3179                  
+ 2016-05-31 00:15:00:   1   Mean   :25.21       Mean   :59.12                 Mean   : 7725         Mean   :0.3179                  
+ 2016-05-31 00:20:00:   1   3rd Qu.:27.00       3rd Qu.:59.59                 3rd Qu.:    0         3rd Qu.:0.3179                  
+ 2016-05-31 00:25:00:   1   Max.   :29.40       Max.   :60.75                 Max.   :89341         Max.   :0.3179                  
+ (Other)            :4026                                                                                                           
+ Supply.Side.Inlet.Temperature Supply.Side.Outlet.Temperature HVAC.Electric.Demand.Power Total.Electric.Demand.Power Loop.Temp.Schedule
+ Min.   :42.12                 Min.   :58.03                  Min.   :  9301             Min.   : 73811              Min.   :60        
+ 1st Qu.:49.24                 1st Qu.:58.65                  1st Qu.: 25317             1st Qu.:110689              1st Qu.:60        
+ Median :56.48                 Median :59.10                  Median : 48192             Median :138986              Median :60        
+ Mean   :54.32                 Mean   :59.12                  Mean   : 52556             Mean   :142275              Mean   :60        
+ 3rd Qu.:58.89                 3rd Qu.:59.59                  3rd Qu.: 57611             3rd Qu.:181530              3rd Qu.:60        
+ Max.   :60.79                 Max.   :60.75                  Max.   :242076             Max.   :341393              Max.   :60        
+                                                                                                                                       
+ Water.Heater.Setpoint DELI.FAN.Power    Pump.Power    F_1_Z_1..Lights.Power F_1_Z_2..Lights.Power F_1_Z_3..Lights.Power F_1_Z_4..Lights.Power
+ Min.   :60            Min.   : 0.00   Min.   :91.37   Min.   :   0.0        Min.   :   0.000      Min.   :3799          Min.   :  0.0        
+ 1st Qu.:60            1st Qu.: 0.00   1st Qu.:91.37   1st Qu.:   0.0        1st Qu.:   0.000      1st Qu.:3799          1st Qu.:  0.0        
+ Median :60            Median :47.17   Median :91.37   Median :   0.0        Median :   0.000      Median :3799          Median :  0.0        
+ Mean   :60            Mean   :31.07   Mean   :91.37   Mean   : 361.8        Mean   :   8.033      Mean   :3799          Mean   :171.5        
+ 3rd Qu.:60            3rd Qu.:47.17   3rd Qu.:91.37   3rd Qu.:   0.0        3rd Qu.:   0.000      3rd Qu.:3799          3rd Qu.:639.8        
+ Max.   :60            Max.   :47.17   Max.   :91.37   Max.   :1919.3        Max.   :2699.019      Max.   :3799          Max.   :639.8        
+                                                                                                                                              
+ F_1_Z_5..Lights.Power F_1_Z_7..Lights.Power F_1_Z_8A..Lights.Power F_1_Z_8B..Lights.Power F_1_Z_1..Equipment.Power F_1_Z_2..Equipment.Power
+ Min.   :  0.00        Min.   :   0          Min.   :1967           Min.   :2542           Min.   : 268.7           Min.   : 377.9          
+ 1st Qu.:  0.00        1st Qu.:   0          1st Qu.:1967           1st Qu.:2542           1st Qu.: 268.7           1st Qu.: 377.9          
+ Median :  0.00        Median :   0          Median :1967           Median :2542           Median : 268.7           Median : 377.9          
+ Mean   : 74.88        Mean   : 632          Mean   :1967           Mean   :2542           Mean   : 471.3           Mean   : 382.4          
+ 3rd Qu.:  0.00        3rd Qu.:1519          3rd Qu.:1967           3rd Qu.:2542           3rd Qu.: 268.7           3rd Qu.: 377.9          
+ Max.   :967.65        Max.   :1519          Max.   :1967           Max.   :2542           Max.   :1343.5           Max.   :1889.3          
+                                                                                                                                            
+ F_1_Z_3..Equipment.Power F_1_Z_4..Equipment.Power F_1_Z_5..Equipment.Power F_1_Z_7..Equipment.Power F_1_Z_8A..Equipment.Power F_1_Z_8B..Equipment.Power
+ Min.   :2659             Min.   : 89.57           Min.   :135.5            Min.   : 212.7           Min.   :1463              Min.   :1890             
+ 1st Qu.:2659             1st Qu.: 89.57           1st Qu.:135.5            1st Qu.: 212.7           1st Qu.:1463              1st Qu.:1890             
+ Median :2659             Median : 89.57           Median :135.5            Median : 212.7           Median :1463              Median :1890             
+ Mean   :2659             Mean   :185.62           Mean   :177.4            Mean   : 566.6           Mean   :1463              Mean   :1890             
+ 3rd Qu.:2659             3rd Qu.:447.84           3rd Qu.:135.5            3rd Qu.:1063.6           3rd Qu.:1463              3rd Qu.:1890             
+ Max.   :2659             Max.   :447.84           Max.   :677.4            Max.   :1063.6           Max.   :1463              Max.   :1890             
+                                                                                                                                                        
+ F_1_Z_1..Thermostat.Temp F_1_Z_1..Thermostat.Heating.Setpoint F_1_Z_1..Thermostat.Cooling.Setpoint F_1_Z_2..Thermostat.Temp
+ Min.   :19.87            Min.   :12.60                        Min.   :15.56                        Min.   :21.32           
+ 1st Qu.:24.00            1st Qu.:15.60                        1st Qu.:24.00                        1st Qu.:23.79           
+ Median :24.01            Median :21.00                        Median :24.00                        Median :24.00           
+ Mean   :24.31            Mean   :20.10                        Mean   :24.81                        Mean   :24.12           
+ 3rd Qu.:24.26            3rd Qu.:24.00                        3rd Qu.:26.70                        3rd Qu.:24.00           
+ Max.   :29.71            Max.   :26.67                        Max.   :29.70                        Max.   :28.44           
+                                                                                                                            
+ F_1_Z_2..Thermostat.Heating.Setpoint F_1_Z_2..Thermostat.Cooling.Setpoint F_1_Z_3..Thermostat.Temp F_1_Z_3..Thermostat.Heating.Setpoint
+ Min.   :12.60                        Min.   :15.56                        Min.   :23.06            Min.   :12.60                       
+ 1st Qu.:15.60                        1st Qu.:24.00                        1st Qu.:24.10            1st Qu.:15.60                       
+ Median :21.00                        Median :24.00                        Median :24.72            Median :21.00                       
+ Mean   :20.27                        Mean   :24.98                        Mean   :25.37            Mean   :20.10                       
+ 3rd Qu.:24.00                        3rd Qu.:26.70                        3rd Qu.:26.71            3rd Qu.:24.00                       
+ Max.   :29.44                        Max.   :32.40                        Max.   :29.64            Max.   :26.67                       
+                                                                                                                                        
+ F_1_Z_3..Thermostat.Cooling.Setpoint F_1_Z_4..Thermostat.Temp F_1_Z_4..Thermostat.Heating.Setpoint F_1_Z_4..Thermostat.Cooling.Setpoint
+ Min.   :15.56                        Min.   :20.27            Min.   :12.60                        Min.   :15.56                       
+ 1st Qu.:24.00                        1st Qu.:23.39            1st Qu.:15.60                        1st Qu.:24.00                       
+ Median :24.00                        Median :24.00            Median :21.00                        Median :24.00                       
+ Mean   :24.81                        Mean   :24.03            Mean   :19.65                        Mean   :24.21                       
+ 3rd Qu.:26.70                        3rd Qu.:24.35            3rd Qu.:24.00                        3rd Qu.:26.70                       
+ Max.   :29.70                        Max.   :29.28            Max.   :26.67                        Max.   :29.70                       
+                                                                                                                                        
+ F_1_Z_5..Thermostat.Temp F_1_Z_5..Thermostat.Heating.Setpoint F_1_Z_5..Thermostat.Cooling.Setpoint F_1_Z_7..Thermostat.Temp
+ Min.   :22.13            Min.   :12.60                        Min.   :15.56                        Min.   :20.02           
+ 1st Qu.:24.00            1st Qu.:15.60                        1st Qu.:24.00                        1st Qu.:23.77           
+ Median :24.00            Median :21.00                        Median :24.00                        Median :24.00           
+ Mean   :24.30            Mean   :20.10                        Mean   :24.81                        Mean   :24.13           
+ 3rd Qu.:24.30            3rd Qu.:24.00                        3rd Qu.:26.70                        3rd Qu.:24.35           
+ Max.   :28.20            Max.   :26.67                        Max.   :29.70                        Max.   :28.88           
+                                                                                                                            
+ F_1_Z_7..Thermostat.Heating.Setpoint F_1_Z_7..Thermostat.Cooling.Setpoint F_1_Z_8A..Thermostat.Temp F_1_Z_8A..Thermostat.Heating.Setpoint
+ Min.   :12.60                        Min.   :15.56                        Min.   :23.75             Min.   :12.60                        
+ 1st Qu.:15.60                        1st Qu.:24.00                        1st Qu.:24.76             1st Qu.:15.60                        
+ Median :21.00                        Median :24.00                        Median :25.33             Median :21.00                        
+ Mean   :19.65                        Mean   :24.21                        Mean   :25.43             Mean   :20.10                        
+ 3rd Qu.:24.00                        3rd Qu.:26.70                        3rd Qu.:26.06             3rd Qu.:24.00                        
+ Max.   :26.67                        Max.   :29.70                        Max.   :28.10             Max.   :26.67                        
+                                                                                                                                          
+ F_1_Z_8A..Thermostat.Cooling.Setpoint F_1_Z_8B..Thermostat.Temp F_1_Z_8B..Thermostat.Heating.Setpoint F_1_Z_8B..Thermostat.Cooling.Setpoint
+ Min.   :15.56                         Min.   :23.63             Min.   :12.60                         Min.   :15.56                        
+ 1st Qu.:24.00                         1st Qu.:24.36             1st Qu.:15.60                         1st Qu.:24.00                        
+ Median :24.00                         Median :24.73             Median :21.00                         Median :24.00                        
+ Mean   :24.81                         Mean   :25.11             Mean   :20.10                         Mean   :24.81                        
+ 3rd Qu.:26.70                         3rd Qu.:26.07             3rd Qu.:24.00                         3rd Qu.:26.70                        
+ Max.   :29.70                         Max.   :27.44             Max.   :26.67                         Max.   :29.70                        
+                                                                                                                                            
+ F_1.VAV.Availability.Manager.Night.Cycle.Control.Status F_1_VAV_SYS.SUPPLY.FAN.Fan.Power F_1_BATH_EXHAUST.Fan.Power F_1_Z_1.VAV.REHEAT.Damper.Position
+ Min.   :0.0000                                          Min.   :   0.0                   Min.   : 0.00              Min.   :0.0000                    
+ 1st Qu.:0.0000                                          1st Qu.: 225.2                   1st Qu.:47.17              1st Qu.:0.2000                    
+ Median :0.0000                                          Median :1096.2                   Median :47.17              Median :0.4296                    
+ Mean   :0.7817                                          Mean   :1119.3                   Mean   :42.30              Mean   :0.5254                    
+ 3rd Qu.:2.0000                                          3rd Qu.:1812.5                   3rd Qu.:47.17              3rd Qu.:1.0000                    
+ Max.   :2.0000                                          Max.   :2345.6                   Max.   :47.17              Max.   :1.0000                    
+                                                                                                                                                       
+ F_1_Z_2.VAV.REHEAT.Damper.Position F_1_Z_3.VAV.REHEAT.Damper.Position F_1_Z_4.VAV.REHEAT.Damper.Position F_1_Z_5.VAV.REHEAT.Damper.Position
+ Min.   :0.0000                     Min.   :0.0000                     Min.   :0.0000                     Min.   :0.0000                    
+ 1st Qu.:0.2000                     1st Qu.:0.2919                     1st Qu.:0.2000                     1st Qu.:0.2000                    
+ Median :0.2000                     Median :0.9466                     Median :0.3992                     Median :0.2439                    
+ Mean   :0.3969                     Mean   :0.6987                     Mean   :0.5717                     Mean   :0.4189                    
+ 3rd Qu.:0.4163                     3rd Qu.:1.0000                     3rd Qu.:1.0000                     3rd Qu.:1.0000                    
+ Max.   :1.0000                     Max.   :1.0000                     Max.   :1.0000                     Max.   :1.0000                    
+                                                                                                                                            
+ F_1_Z_7.VAV.REHEAT.Damper.Position F_1_Z_8A.VAV.REHEAT.Damper.Position F_1_Z_8B.VAV.REHEAT.Damper.Position F_1_Z_1.REHEAT.COIL.Power
+ Min.   :0.0000                     Min.   :0.0000                      Min.   :0.0000                      Min.   :   0.0           
+ 1st Qu.:0.2000                     1st Qu.:0.2000                      1st Qu.:0.2000                      1st Qu.:   0.0           
+ Median :0.3060                     Median :1.0000                      Median :1.0000                      Median :   0.0           
+ Mean   :0.5044                     Mean   :0.6797                      Mean   :0.6675                      Mean   : 564.2           
+ 3rd Qu.:1.0000                     3rd Qu.:1.0000                      3rd Qu.:1.0000                      3rd Qu.:   0.0           
+ Max.   :1.0000                     Max.   :1.0000                      Max.   :1.0000                      Max.   :9866.9           
+                                                                                                                                     
+ F_1_Z_2.REHEAT.COIL.Power F_1_Z_3.REHEAT.COIL.Power F_1_Z_4.REHEAT.COIL.Power F_1_Z_5.REHEAT.COIL.Power F_1_Z_7.REHEAT.COIL.Power
+ Min.   :   0.0            Min.   :   0.0            Min.   :   0.0            Min.   :   0              Min.   :   0.0           
+ 1st Qu.:   0.0            1st Qu.:   0.0            1st Qu.:   0.0            1st Qu.:   0              1st Qu.:   0.0           
+ Median :   0.0            Median :   0.0            Median :   0.0            Median :   0              Median :   0.0           
+ Mean   : 540.9            Mean   :  70.1            Mean   : 163.6            Mean   : 154              Mean   : 510.3           
+ 3rd Qu.:1067.1            3rd Qu.:   0.0            3rd Qu.:   0.0            3rd Qu.:   0              3rd Qu.:   0.0           
+ Max.   :5361.4            Max.   :7209.0            Max.   :2527.6            Max.   :1641              Max.   :7620.9           
+                                                                                                                                  
+ F_1_Z_8A.REHEAT.COIL.Power F_1_Z_8B.REHEAT.COIL.Power F_1_VAV_SYS.HEATING.COIL.Power F_1_VAV_SYS.Outdoor.Air.Flow.Fraction
+ Min.   :   0.00            Min.   :   0.00            Min.   :0                      Min.   :0.0000                       
+ 1st Qu.:   0.00            1st Qu.:   0.00            1st Qu.:0                      1st Qu.:0.2775                       
+ Median :   0.00            Median :   0.00            Median :0                      Median :0.3996                       
+ Mean   :  13.45            Mean   :  24.34            Mean   :0                      Mean   :0.5087                       
+ 3rd Qu.:   0.00            3rd Qu.:   0.00            3rd Qu.:0                      3rd Qu.:1.0000                       
+ Max.   :4652.26            Max.   :6011.53            Max.   :0                      Max.   :1.0000                       
+                                                                                                                           
+ F_1_VAV_SYS.Outdoor.Air.Mass.Flow.Rate F_1_VAV_SYS.COOLING.COIL.Power F_1_VAV_SYS.AIR.LOOP.INLET.Temperature F_1_VAV_SYS.AIR.LOOP.INLET.Mass.Flow.Rate
+ Min.   :0.0000                         Min.   :    0                  Min.   :19.87                          Min.   :0.0000                           
+ 1st Qu.:0.3407                         1st Qu.: 1838                  1st Qu.:23.99                          1st Qu.:0.0000                           
+ Median :0.4483                         Median : 5681                  Median :24.17                          Median :0.8431                           
+ Mean   :0.4737                         Mean   : 5619                  Mean   :24.47                          Mean   :0.6751                           
+ 3rd Qu.:0.6815                         3rd Qu.: 9320                  3rd Qu.:24.52                          3rd Qu.:1.1171                           
+ Max.   :0.6815                         Max.   :13562                  Max.   :29.71                          Max.   :1.9787                           
+                                                                                                                                                       
+ F_1_VAV_SYS.SUPPLY.FAN.OUTLET.Temperature F_1_VAV_SYS.SUPPLY.FAN.OUTLET.Mass.Flow.Rate F_1_Z_1.RETURN.OUTLET.CO2.Concentration
+ Min.   :12.20                             Min.   :0.0000                               Min.   : 100.7                         
+ 1st Qu.:12.80                             1st Qu.:0.4482                               1st Qu.: 185.6                         
+ Median :12.80                             Median :1.2796                               Median : 503.8                         
+ Mean   :13.53                             Mean   :1.1488                               Mean   : 494.2                         
+ 3rd Qu.:12.80                             3rd Qu.:1.7077                               3rd Qu.: 671.8                         
+ Max.   :25.73                             Max.   :1.9787                               Max.   :1431.6                         
+                                                                                                                               
+ F_1_Z_1.SUPPLY.INLET.Temperature F_1_Z_1.SUPPLY.INLET.Mass.Flow.Rate F_1_Z_2.RETURN.OUTLET.CO2.Concentration F_1_Z_2.SUPPLY.INLET.Temperature
+ Min.   :12.20                    Min.   :0.0000                      Min.   : 503.2                          Min.   :12.20                   
+ 1st Qu.:12.80                    1st Qu.:0.0806                      1st Qu.: 679.8                          1st Qu.:12.80                   
+ Median :12.80                    Median :0.1745                      Median : 780.8                          Median :12.80                   
+ Mean   :15.06                    Mean   :0.2121                      Mean   : 818.1                          Mean   :17.83                   
+ 3rd Qu.:15.16                    3rd Qu.:0.4032                      3rd Qu.: 916.7                          3rd Qu.:21.90                   
+ Max.   :40.04                    Max.   :0.4032                      Max.   :1617.4                          Max.   :40.68                   
+                                                                                                                                              
+ F_1_Z_2.SUPPLY.INLET.Mass.Flow.Rate F_1_Z_3.RETURN.OUTLET.CO2.Concentration F_1_Z_3.SUPPLY.INLET.Temperature F_1_Z_3.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   :0.00000                     Min.   : 497.5                          Min.   :12.20                    Min.   :0.0000                     
+ 1st Qu.:0.04380                     1st Qu.: 709.0                          1st Qu.:12.80                    1st Qu.:0.1282                     
+ Median :0.05335                     Median : 811.7                          Median :12.80                    Median :0.4155                     
+ Mean   :0.09061                     Mean   : 961.2                          Mean   :13.69                    Mean   :0.3068                     
+ 3rd Qu.:0.09760                     3rd Qu.:1112.9                          3rd Qu.:12.81                    3rd Qu.:0.4390                     
+ Max.   :0.21910                     Max.   :2303.0                          Max.   :40.02                    Max.   :0.4390                     
+                                                                                                                                                 
+ F_1_Z_4.RETURN.OUTLET.CO2.Concentration F_1_Z_4.SUPPLY.INLET.Temperature F_1_Z_4.SUPPLY.INLET.Mass.Flow.Rate F_1_Z_5.RETURN.OUTLET.CO2.Concentration
+ Min.   : 452.4                          Min.   :12.20                    Min.   :0.00000                     Min.   : 515.8                         
+ 1st Qu.: 696.7                          1st Qu.:12.80                    1st Qu.:0.02070                     1st Qu.: 739.0                         
+ Median : 807.1                          Median :12.80                    Median :0.04180                     Median : 952.5                         
+ Mean   : 886.7                          Mean   :15.70                    Mean   :0.05921                     Mean   :1093.0                         
+ 3rd Qu.: 873.4                          3rd Qu.:16.95                    3rd Qu.:0.10330                     3rd Qu.:1260.7                         
+ Max.   :2746.1                          Max.   :40.67                    Max.   :0.10330                     Max.   :3054.5                         
+                                                                                                                                                     
+ F_1_Z_5.SUPPLY.INLET.Temperature F_1_Z_5.SUPPLY.INLET.Mass.Flow.Rate F_1_Z_7.RETURN.OUTLET.CO2.Concentration F_1_Z_7.SUPPLY.INLET.Temperature
+ Min.   :12.20                    Min.   :0.00000                     Min.   : 489.2                          Min.   :12.20                   
+ 1st Qu.:12.80                    1st Qu.:0.01340                     1st Qu.: 726.7                          1st Qu.:12.80                   
+ Median :12.80                    Median :0.01750                     Median : 826.5                          Median :12.80                   
+ Mean   :17.25                    Mean   :0.02892                     Mean   : 947.8                          Mean   :15.68                   
+ 3rd Qu.:21.57                    3rd Qu.:0.06700                     3rd Qu.:1082.5                          3rd Qu.:18.77                   
+ Max.   :40.71                    Max.   :0.06700                     Max.   :2541.5                          Max.   :40.00                   
+                                                                                                                                              
+ F_1_Z_7.SUPPLY.INLET.Mass.Flow.Rate F_1_Z_8A.RETURN.OUTLET.CO2.Concentration F_1_Z_8A.SUPPLY.INLET.Temperature F_1_Z_8A.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   :0.0000                      Min.   : 49.60                           Min.   :12.20                     Min.   :0.0000                      
+ 1st Qu.:0.0623                      1st Qu.: 94.01                           1st Qu.:12.80                     1st Qu.:0.0380                      
+ Median :0.0958                      Median :305.90                           Median :12.80                     Median :0.1901                      
+ Mean   :0.1573                      Mean   :260.97                           Mean   :13.68                     Mean   :0.1295                      
+ 3rd Qu.:0.3114                      3rd Qu.:364.26                           3rd Qu.:12.80                     3rd Qu.:0.1901                      
+ Max.   :0.3114                      Max.   :624.26                           Max.   :39.91                     Max.   :0.1901                      
+                                                                                                                                                    
+ F_1_Z_8B.RETURN.OUTLET.CO2.Concentration F_1_Z_8B.SUPPLY.INLET.Temperature F_1_Z_8B.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   : 512.9                           Min.   :12.20                     Min.   :0.0000                      
+ 1st Qu.: 698.2                           1st Qu.:12.80                     1st Qu.:0.0491                      
+ Median : 787.4                           Median :12.80                     Median :0.2456                      
+ Mean   : 791.3                           Mean   :13.75                     Mean   :0.1644                      
+ 3rd Qu.: 875.7                           3rd Qu.:12.80                     3rd Qu.:0.2456                      
+ Max.   :1182.4                           Max.   :40.05                     Max.   :0.2456                      
+                                                                                                                
+ F_1_Z_1..Mechanical.Ventilation.Mass.Flow.Rate F_2_Z_1..Lights.Power F_2_Z_10..Lights.Power F_2_Z_11..Lights.Power F_2_Z_12A..Lights.Power
+ Min.   :0.00000                                Min.   :  0.00        Min.   :   0.0         Min.   :  0.00         Min.   :719.7          
+ 1st Qu.:0.06550                                1st Qu.:  0.00        1st Qu.:   0.0         1st Qu.:  0.00         1st Qu.:719.7          
+ Median :0.08060                                Median :  0.00        Median :   0.0         Median :  0.00         Median :719.7          
+ Mean   :0.08784                                Mean   : 56.01        Mean   : 380.4         Mean   : 62.48         Mean   :719.7          
+ 3rd Qu.:0.13890                                3rd Qu.:  0.00        3rd Qu.:1007.6         3rd Qu.:  0.00         3rd Qu.:719.7          
+ Max.   :0.20550                                Max.   :319.88        Max.   :1007.6         Max.   :279.90         Max.   :719.7          
+                                                                                                                                           
+ F_2_Z_12B..Lights.Power F_2_Z_12C..Lights.Power F_2_Z_14..Lights.Power F_2_Z_15..Lights.Power F_2_Z_16..Lights.Power F_2_Z_2..Lights.Power
+ Min.   :1368            Min.   :1303            Min.   :  0.0          Min.   :  0.00         Min.   :  0.0          Min.   :   0         
+ 1st Qu.:1368            1st Qu.:1303            1st Qu.:  0.0          1st Qu.:  0.00         1st Qu.:  0.0          1st Qu.:   0         
+ Median :1368            Median :1303            Median :  0.0          Median :  0.00         Median :  0.0          Median :   0         
+ Mean   :1368            Mean   :1303            Mean   :141.8          Mean   : 60.53         Mean   :145.0          Mean   :1017         
+ 3rd Qu.:1368            3rd Qu.:1303            3rd Qu.:  0.0          3rd Qu.:  0.00         3rd Qu.:  0.0          3rd Qu.:2463         
+ Max.   :1368            Max.   :1303            Max.   :967.6          Max.   :279.90         Max.   :967.6          Max.   :2463         
+                                                                                                                                           
+ F_2_Z_3..Lights.Power F_2_Z_4..Lights.Power F_2_Z_5..Lights.Power F_2_Z_6..Lights.Power F_2_Z_7..Lights.Power F_2_Z_8..Lights.Power
+ Min.   :  0.00        Min.   :   0.0        Min.   :  0.00        Min.   :   0          Min.   :  0.00        Min.   :   0.0       
+ 1st Qu.:  0.00        1st Qu.:   0.0        1st Qu.:  0.00        1st Qu.:   0          1st Qu.:  0.00        1st Qu.:   0.0       
+ Median :  0.00        Median :   0.0        Median :  0.00        Median :   0          Median :  0.00        Median :   0.0       
+ Mean   : 56.96        Mean   : 416.8        Mean   : 39.43        Mean   : 854          Mean   : 56.09        Mean   : 337.4       
+ 3rd Qu.:  0.00        3rd Qu.:1199.6        3rd Qu.:  0.00        3rd Qu.:2463          3rd Qu.:  0.00        3rd Qu.:1199.6       
+ Max.   :319.88        Max.   :1199.6        Max.   :319.88        Max.   :2463          Max.   :319.88        Max.   :1199.6       
+                                                                                                                                    
+ F_2_Z_9..Lights.Power F_2_Z_1..Equipment.Power F_2_Z_10..Equipment.Power F_2_Z_11..Equipment.Power F_2_Z_12A..Equipment.Power
+ Min.   :   0.0        Min.   : 44.78           Min.   :141.1             Min.   : 39.19            Min.   :535.1             
+ 1st Qu.:   0.0        1st Qu.: 44.78           1st Qu.:141.1             1st Qu.: 39.19            1st Qu.:535.1             
+ Median :   0.0        Median : 44.78           Median :141.1             Median : 39.19            Median :535.1             
+ Mean   : 516.9        Mean   : 76.15           Mean   :354.1             Mean   : 74.17            Mean   :535.1             
+ 3rd Qu.:1675.4        3rd Qu.: 44.78           3rd Qu.:705.3             3rd Qu.: 39.19            3rd Qu.:535.1             
+ Max.   :1675.4        Max.   :223.92           Max.   :705.3             Max.   :195.93            Max.   :535.1             
+                                                                                                                              
+ F_2_Z_12B..Equipment.Power F_2_Z_12C..Equipment.Power F_2_Z_14..Equipment.Power F_2_Z_15..Equipment.Power F_2_Z_16..Equipment.Power
+ Min.   :1017               Min.   :968.4              Min.   :135.5             Min.   : 39.19            Min.   :135.5            
+ 1st Qu.:1017               1st Qu.:968.4              1st Qu.:135.5             1st Qu.: 39.19            1st Qu.:135.5            
+ Median :1017               Median :968.4              Median :135.5             Median : 39.19            Median :135.5            
+ Mean   :1017               Mean   :968.4              Mean   :214.9             Mean   : 73.08            Mean   :216.6            
+ 3rd Qu.:1017               3rd Qu.:968.4              3rd Qu.:135.5             3rd Qu.: 39.19            3rd Qu.:135.5            
+ Max.   :1017               Max.   :968.4              Max.   :677.4             Max.   :195.93            Max.   :677.4            
+                                                                                                                                    
+ F_2_Z_2..Equipment.Power F_2_Z_3..Equipment.Power F_2_Z_4..Equipment.Power F_2_Z_5..Equipment.Power F_2_Z_6..Equipment.Power F_2_Z_7..Equipment.Power
+ Min.   : 344.8           Min.   : 44.78           Min.   :167.9            Min.   : 44.78           Min.   : 344.8           Min.   : 44.78          
+ 1st Qu.: 344.8           1st Qu.: 44.78           1st Qu.:167.9            1st Qu.: 44.78           1st Qu.: 344.8           1st Qu.: 44.78          
+ Median : 344.8           Median : 44.78           Median :167.9            Median : 44.78           Median : 344.8           Median : 44.78          
+ Mean   : 914.4           Mean   : 76.68           Mean   :401.4            Mean   : 66.86           Mean   : 823.1           Mean   : 76.19          
+ 3rd Qu.:1724.2           3rd Qu.: 44.78           3rd Qu.:839.7            3rd Qu.: 44.78           3rd Qu.:1724.2           3rd Qu.: 44.78          
+ Max.   :1724.2           Max.   :223.92           Max.   :839.7            Max.   :223.92           Max.   :1724.2           Max.   :223.92          
+                                                                                                                                                      
+ F_2_Z_8..Equipment.Power F_2_Z_9..Equipment.Power F_2_Z_1..Thermostat.Temp F_2_Z_1..Thermostat.Heating.Setpoint F_2_Z_1..Thermostat.Cooling.Setpoint
+ Min.   :167.9            Min.   : 234.6           Min.   :18.84            Min.   :12.60                        Min.   :15.56                       
+ 1st Qu.:167.9            1st Qu.: 234.6           1st Qu.:23.61            1st Qu.:15.60                        1st Qu.:24.00                       
+ Median :167.9            Median : 234.6           Median :24.00            Median :21.00                        Median :24.00                       
+ Mean   :356.9            Mean   : 524.0           Mean   :23.97            Mean   :20.10                        Mean   :24.81                       
+ 3rd Qu.:839.7            3rd Qu.:1172.8           3rd Qu.:24.00            3rd Qu.:24.00                        3rd Qu.:26.70                       
+ Max.   :839.7            Max.   :1172.8           Max.   :29.57            Max.   :26.67                        Max.   :29.70                       
+                                                                                                                                                     
+ F_2_Z_10..Thermostat.Temp F_2_Z_10..Thermostat.Heating.Setpoint F_2_Z_10..Thermostat.Cooling.Setpoint F_2_Z_11..Thermostat.Temp
+ Min.   :20.66             Min.   :12.60                         Min.   :15.56                         Min.   :20.88            
+ 1st Qu.:24.00             1st Qu.:15.60                         1st Qu.:24.00                         1st Qu.:24.00            
+ Median :24.03             Median :21.00                         Median :24.00                         Median :24.19            
+ Mean   :24.70             Mean   :20.10                         Mean   :24.81                         Mean   :24.59            
+ 3rd Qu.:24.98             3rd Qu.:24.00                         3rd Qu.:26.70                         3rd Qu.:24.85            
+ Max.   :29.71             Max.   :26.67                         Max.   :29.70                         Max.   :29.72            
+                                                                                                                                
+ F_2_Z_11..Thermostat.Heating.Setpoint F_2_Z_11..Thermostat.Cooling.Setpoint F_2_Z_12A..Thermostat.Temp F_2_Z_12A..Thermostat.Heating.Setpoint
+ Min.   :12.60                         Min.   :15.56                         Min.   :22.53              Min.   :12.60                         
+ 1st Qu.:15.60                         1st Qu.:24.00                         1st Qu.:24.00              1st Qu.:15.60                         
+ Median :21.00                         Median :24.00                         Median :24.33              Median :21.00                         
+ Mean   :20.10                         Mean   :24.81                         Mean   :25.13              Mean   :20.10                         
+ 3rd Qu.:24.00                         3rd Qu.:26.70                         3rd Qu.:26.39              3rd Qu.:24.00                         
+ Max.   :26.67                         Max.   :29.70                         Max.   :29.29              Max.   :26.67                         
+                                                                                                                                              
+ F_2_Z_12A..Thermostat.Cooling.Setpoint F_2_Z_12B..Thermostat.Temp F_2_Z_12B..Thermostat.Heating.Setpoint F_2_Z_12B..Thermostat.Cooling.Setpoint
+ Min.   :15.56                          Min.   :23.02              Min.   :12.60                          Min.   :15.56                         
+ 1st Qu.:24.00                          1st Qu.:24.22              1st Qu.:15.60                          1st Qu.:24.00                         
+ Median :24.00                          Median :24.77              Median :21.00                          Median :24.00                         
+ Mean   :24.81                          Mean   :25.43              Mean   :20.10                          Mean   :24.81                         
+ 3rd Qu.:26.70                          3rd Qu.:26.70              3rd Qu.:24.00                          3rd Qu.:26.70                         
+ Max.   :29.70                          Max.   :29.70              Max.   :26.67                          Max.   :29.70                         
+                                                                                                                                                
+ F_2_Z_12C..Thermostat.Temp F_2_Z_12C..Thermostat.Heating.Setpoint F_2_Z_12C..Thermostat.Cooling.Setpoint F_2_Z_14..Thermostat.Temp
+ Min.   :22.82              Min.   :12.60                          Min.   :15.56                          Min.   :19.23            
+ 1st Qu.:24.00              1st Qu.:15.60                          1st Qu.:24.00                          1st Qu.:23.94            
+ Median :24.36              Median :21.00                          Median :24.00                          Median :24.00            
+ Mean   :25.20              Mean   :20.10                          Mean   :24.81                          Mean   :24.30            
+ 3rd Qu.:26.70              3rd Qu.:24.00                          3rd Qu.:26.70                          3rd Qu.:24.33            
+ Max.   :29.27              Max.   :26.67                          Max.   :29.70                          Max.   :29.74            
+                                                                                                                                   
+ F_2_Z_14..Thermostat.Heating.Setpoint F_2_Z_14..Thermostat.Cooling.Setpoint F_2_Z_15..Thermostat.Temp F_2_Z_15..Thermostat.Heating.Setpoint
+ Min.   :12.60                         Min.   :15.56                         Min.   :21.12             Min.   :12.60                        
+ 1st Qu.:15.60                         1st Qu.:24.00                         1st Qu.:24.00             1st Qu.:15.60                        
+ Median :21.00                         Median :24.00                         Median :24.20             Median :21.00                        
+ Mean   :20.20                         Mean   :24.87                         Mean   :24.64             Mean   :20.10                        
+ 3rd Qu.:24.00                         3rd Qu.:26.70                         3rd Qu.:24.97             3rd Qu.:24.00                        
+ Max.   :26.67                         Max.   :29.70                         Max.   :29.71             Max.   :26.67                        
+                                                                                                                                            
+ F_2_Z_15..Thermostat.Cooling.Setpoint F_2_Z_16..Thermostat.Temp F_2_Z_16..Thermostat.Heating.Setpoint F_2_Z_16..Thermostat.Cooling.Setpoint
+ Min.   :15.56                         Min.   :21.16             Min.   :12.60                         Min.   :15.56                        
+ 1st Qu.:24.00                         1st Qu.:24.00             1st Qu.:15.60                         1st Qu.:24.00                        
+ Median :24.00                         Median :24.02             Median :21.00                         Median :24.00                        
+ Mean   :24.81                         Mean   :24.66             Mean   :20.08                         Mean   :24.78                        
+ 3rd Qu.:26.70                         3rd Qu.:25.15             3rd Qu.:24.00                         3rd Qu.:26.70                        
+ Max.   :29.70                         Max.   :29.71             Max.   :26.67                         Max.   :29.70                        
+                                                                                                                                            
+ F_2_Z_2..Thermostat.Temp F_2_Z_2..Thermostat.Heating.Setpoint F_2_Z_2..Thermostat.Cooling.Setpoint F_2_Z_3..Thermostat.Temp
+ Min.   :20.00            Min.   :12.60                        Min.   :15.56                        Min.   :19.00           
+ 1st Qu.:24.00            1st Qu.:15.60                        1st Qu.:24.00                        1st Qu.:23.77           
+ Median :24.01            Median :21.00                        Median :24.00                        Median :24.00           
+ Mean   :24.67            Mean   :20.31                        Mean   :25.01                        Mean   :24.14           
+ 3rd Qu.:24.63            3rd Qu.:24.00                        3rd Qu.:26.70                        3rd Qu.:24.01           
+ Max.   :29.71            Max.   :26.67                        Max.   :29.70                        Max.   :29.71           
+                                                                                                                            
+ F_2_Z_3..Thermostat.Heating.Setpoint F_2_Z_3..Thermostat.Cooling.Setpoint F_2_Z_4..Thermostat.Temp F_2_Z_4..Thermostat.Heating.Setpoint
+ Min.   :12.60                        Min.   :15.56                        Min.   :18.98            Min.   :12.60                       
+ 1st Qu.:15.60                        1st Qu.:24.00                        1st Qu.:24.00            1st Qu.:15.60                       
+ Median :21.00                        Median :24.00                        Median :24.00            Median :21.00                       
+ Mean   :20.10                        Mean   :24.81                        Mean   :24.42            Mean   :20.31                       
+ 3rd Qu.:24.00                        3rd Qu.:26.70                        3rd Qu.:24.34            3rd Qu.:24.00                       
+ Max.   :26.67                        Max.   :29.70                        Max.   :29.71            Max.   :26.67                       
+                                                                                                                                        
+ F_2_Z_4..Thermostat.Cooling.Setpoint F_2_Z_5..Thermostat.Temp F_2_Z_5..Thermostat.Heating.Setpoint F_2_Z_5..Thermostat.Cooling.Setpoint
+ Min.   :15.56                        Min.   :19.92            Min.   :12.60                        Min.   :15.56                       
+ 1st Qu.:24.00                        1st Qu.:24.00            1st Qu.:15.60                        1st Qu.:24.00                       
+ Median :24.00                        Median :24.00            Median :21.00                        Median :24.00                       
+ Mean   :25.01                        Mean   :24.30            Mean   :20.10                        Mean   :24.81                       
+ 3rd Qu.:26.70                        3rd Qu.:24.21            3rd Qu.:24.00                        3rd Qu.:26.70                       
+ Max.   :29.70                        Max.   :29.04            Max.   :26.67                        Max.   :29.70                       
+                                                                                                                                        
+ F_2_Z_6..Thermostat.Temp F_2_Z_6..Thermostat.Heating.Setpoint F_2_Z_6..Thermostat.Cooling.Setpoint F_2_Z_7..Thermostat.Temp
+ Min.   :19.90            Min.   :12.60                        Min.   :15.56                        Min.   :18.38           
+ 1st Qu.:24.00            1st Qu.:15.60                        1st Qu.:24.00                        1st Qu.:23.24           
+ Median :24.00            Median :21.00                        Median :24.00                        Median :24.00           
+ Mean   :24.54            Mean   :20.37                        Mean   :25.08                        Mean   :23.78           
+ 3rd Qu.:24.37            3rd Qu.:24.00                        3rd Qu.:26.70                        3rd Qu.:24.00           
+ Max.   :29.71            Max.   :26.67                        Max.   :29.70                        Max.   :29.18           
+                                                                                                                            
+ F_2_Z_7..Thermostat.Heating.Setpoint F_2_Z_7..Thermostat.Cooling.Setpoint F_2_Z_8..Thermostat.Temp F_2_Z_8..Thermostat.Heating.Setpoint
+ Min.   :12.60                        Min.   :15.56                        Min.   :18.42            Min.   :12.60                       
+ 1st Qu.:15.60                        1st Qu.:24.00                        1st Qu.:23.46            1st Qu.:15.60                       
+ Median :21.00                        Median :24.00                        Median :24.00            Median :21.00                       
+ Mean   :20.10                        Mean   :24.81                        Mean   :24.21            Mean   :20.31                       
+ 3rd Qu.:24.00                        3rd Qu.:26.70                        3rd Qu.:24.00            3rd Qu.:24.00                       
+ Max.   :26.67                        Max.   :29.70                        Max.   :33.74            Max.   :26.67                       
+                                                                                                                                        
+ F_2_Z_8..Thermostat.Cooling.Setpoint F_2_Z_9..Thermostat.Temp F_2_Z_9..Thermostat.Heating.Setpoint F_2_Z_9..Thermostat.Cooling.Setpoint
+ Min.   :15.56                        Min.   :20.63            Min.   :12.60                        Min.   :15.56                       
+ 1st Qu.:24.00                        1st Qu.:24.00            1st Qu.:15.60                        1st Qu.:24.00                       
+ Median :24.00                        Median :24.00            Median :21.00                        Median :24.00                       
+ Mean   :25.01                        Mean   :24.58            Mean   :20.10                        Mean   :24.81                       
+ 3rd Qu.:26.70                        3rd Qu.:24.78            3rd Qu.:24.00                        3rd Qu.:26.70                       
+ Max.   :29.70                        Max.   :29.71            Max.   :26.67                        Max.   :29.70                       
+                                                                                                                                        
+ F_2_VAV_SYS.SUPPLY.FAN.Fan.Power F_2_BATH_EXHAUST.Fan.Power F_2_Z_1.VAV.REHEAT.Damper.Position F_2_Z_2.VAV.REHEAT.Damper.Position
+ Min.   :   0                     Min.   : 0.00              Min.   :0.0000                     Min.   :0.0000                    
+ 1st Qu.: 472                     1st Qu.:47.17              1st Qu.:0.2000                     1st Qu.:0.2000                    
+ Median :1543                     Median :47.17              Median :0.3066                     Median :0.4455                    
+ Mean   :2153                     Mean   :43.35              Mean   :0.4800                     Mean   :0.5708                    
+ 3rd Qu.:3701                     3rd Qu.:47.17              3rd Qu.:0.8260                     3rd Qu.:1.0000                    
+ Max.   :4917                     Max.   :47.17              Max.   :1.0000                     Max.   :1.0000                    
+                                                                                                                                  
+ F_2_Z_3.VAV.REHEAT.Damper.Position F_2_Z_4.VAV.REHEAT.Damper.Position F_2_Z_5.VAV.REHEAT.Damper.Position F_2_Z_6.VAV.REHEAT.Damper.Position
+ Min.   :0.0000                     Min.   :0.0000                     Min.   :0.0000                     Min.   :0.0000                    
+ 1st Qu.:0.2000                     1st Qu.:0.2000                     1st Qu.:0.2000                     1st Qu.:0.2000                    
+ Median :0.3756                     Median :0.3800                     Median :0.6112                     Median :0.2663                    
+ Mean   :0.5170                     Mean   :0.5037                     Mean   :0.5556                     Mean   :0.5171                    
+ 3rd Qu.:1.0000                     3rd Qu.:0.9412                     3rd Qu.:0.9505                     3rd Qu.:0.9786                    
+ Max.   :1.0000                     Max.   :1.0000                     Max.   :1.0000                     Max.   :1.0000                    
+                                                                                                                                            
+ F_2_Z_7.VAV.REHEAT.Damper.Position F_2_Z_8.VAV.REHEAT.Damper.Position F_2_Z_9.VAV.REHEAT.Damper.Position F_2_Z_10.VAV.REHEAT.Damper.Position
+ Min.   :0.0000                     Min.   :0.0000                     Min.   :0.0000                     Min.   :0.0000                     
+ 1st Qu.:0.2000                     1st Qu.:0.2000                     1st Qu.:0.2000                     1st Qu.:0.2000                     
+ Median :0.2333                     Median :0.2000                     Median :0.3657                     Median :0.4179                     
+ Mean   :0.4468                     Mean   :0.4351                     Mean   :0.5574                     Mean   :0.5809                     
+ 3rd Qu.:0.6995                     3rd Qu.:0.7504                     3rd Qu.:1.0000                     3rd Qu.:1.0000                     
+ Max.   :1.0000                     Max.   :1.0000                     Max.   :1.0000                     Max.   :1.0000                     
+                                                                                                                                             
+ F_2_Z_11.VAV.REHEAT.Damper.Position F_2_Z_12A.VAV.REHEAT.Damper.Position F_2_Z_12B.VAV.REHEAT.Damper.Position F_2_Z_12C.VAV.REHEAT.Damper.Position
+ Min.   :0.0000                      Min.   :0.0000                       Min.   :0.0000                       Min.   :0.0000                      
+ 1st Qu.:0.2000                      1st Qu.:0.2000                       1st Qu.:0.2857                       1st Qu.:0.2376                      
+ Median :0.3498                      Median :0.9158                       Median :1.0000                       Median :0.9466                      
+ Mean   :0.5388                      Mean   :0.6701                       Mean   :0.7107                       Mean   :0.6894                      
+ 3rd Qu.:1.0000                      3rd Qu.:1.0000                       3rd Qu.:1.0000                       3rd Qu.:1.0000                      
+ Max.   :1.0000                      Max.   :1.0000                       Max.   :1.0000                       Max.   :1.0000                      
+                                                                                                                                                   
+ F_2_Z_14.VAV.REHEAT.Damper.Position F_2_Z_15.VAV.REHEAT.Damper.Position F_2_Z_16.VAV.REHEAT.Damper.Position F_2_Z_1.REHEAT.COIL.Power
+ Min.   :0.000                       Min.   :0.0000                      Min.   :0.0000                      Min.   :   0.0           
+ 1st Qu.:0.200                       1st Qu.:0.2000                      1st Qu.:0.2000                      1st Qu.:   0.0           
+ Median :0.200                       Median :0.3866                      Median :0.3276                      Median :   0.0           
+ Mean   :0.426                       Mean   :0.5453                      Mean   :0.4918                      Mean   : 171.1           
+ 3rd Qu.:1.000                       3rd Qu.:1.0000                      3rd Qu.:1.0000                      3rd Qu.:   0.0           
+ Max.   :1.000                       Max.   :1.0000                      Max.   :1.0000                      Max.   :2795.8           
+                                                                                                                                      
+ F_2_Z_2.REHEAT.COIL.Power F_2_Z_3.REHEAT.COIL.Power F_2_Z_4.REHEAT.COIL.Power F_2_Z_5.REHEAT.COIL.Power F_2_Z_6.REHEAT.COIL.Power
+ Min.   :    0.0           Min.   :   0.0            Min.   :   0.0            Min.   :   0.00           Min.   :    0            
+ 1st Qu.:    0.0           1st Qu.:   0.0            1st Qu.:   0.0            1st Qu.:   0.00           1st Qu.:    0            
+ Median :    0.0           Median :   0.0            Median :   0.0            Median :   0.00           Median :    0            
+ Mean   :  686.1           Mean   : 144.5            Mean   : 532.1            Mean   :  80.55           Mean   :  783            
+ 3rd Qu.:    0.0           3rd Qu.:   0.0            3rd Qu.:   0.0            3rd Qu.:   0.00           3rd Qu.:    0            
+ Max.   :12927.5           Max.   :1947.8            Max.   :7723.8            Max.   :1815.03           Max.   :13263            
+                                                                                                                                  
+ F_2_Z_7.REHEAT.COIL.Power F_2_Z_8.REHEAT.COIL.Power F_2_Z_9.REHEAT.COIL.Power F_2_Z_10.REHEAT.COIL.Power F_2_Z_11.REHEAT.COIL.Power
+ Min.   :   0.0            Min.   :    0.0           Min.   :   0.0            Min.   :   0.0             Min.   :   0.00           
+ 1st Qu.:   0.0            1st Qu.:    0.0           1st Qu.:   0.0            1st Qu.:   0.0             1st Qu.:   0.00           
+ Median :   0.0            Median :    0.0           Median :   0.0            Median :   0.0             Median :   0.00           
+ Mean   : 221.1            Mean   :  769.1           Mean   : 427.8            Mean   : 265.4             Mean   :  80.46           
+ 3rd Qu.:   0.0            3rd Qu.:    0.0           3rd Qu.:   0.0            3rd Qu.:   0.0             3rd Qu.:   0.00           
+ Max.   :3315.0            Max.   :11406.6           Max.   :7304.8            Max.   :4683.2             Max.   :1341.69           
+                                                                                                                                    
+ F_2_Z_12A.REHEAT.COIL.Power F_2_Z_12B.REHEAT.COIL.Power F_2_Z_12C.REHEAT.COIL.Power F_2_Z_14.REHEAT.COIL.Power F_2_Z_15.REHEAT.COIL.Power
+ Min.   :   0.00             Min.   :   0.0              Min.   :   0.00             Min.   :   0.0             Min.   :   0.0            
+ 1st Qu.:   0.00             1st Qu.:   0.0              1st Qu.:   0.00             1st Qu.:   0.0             1st Qu.:   0.0            
+ Median :   0.00             Median :   0.0              Median :   0.00             Median :   0.0             Median :   0.0            
+ Mean   :  86.29             Mean   :  87.4              Mean   :  83.27             Mean   : 507.2             Mean   :  72.1            
+ 3rd Qu.:   0.00             3rd Qu.:   0.0              3rd Qu.:   0.00             3rd Qu.:   0.0             3rd Qu.:   0.0            
+ Max.   :4515.16             Max.   :7428.1              Max.   :6830.90             Max.   :6935.1             Max.   :1248.4            
+                                                                                                                                          
+ F_2_Z_16.REHEAT.COIL.Power F_2_VAV_SYS.HEATING.COIL.Power F_2_VAV_SYS.Outdoor.Air.Flow.Fraction F_2_VAV_SYS.Outdoor.Air.Mass.Flow.Rate
+ Min.   :   0.0             Min.   :0                      Min.   :0.0000                        Min.   :0.0000                        
+ 1st Qu.:   0.0             1st Qu.:0                      1st Qu.:0.0821                        1st Qu.:0.3407                        
+ Median :   0.0             Median :0                      Median :0.1331                        Median :0.3407                        
+ Mean   : 205.8             Mean   :0                      Mean   :0.1968                        Mean   :0.3132                        
+ 3rd Qu.:   0.0             3rd Qu.:0                      3rd Qu.:0.3741                        3rd Qu.:0.3407                        
+ Max.   :3455.2             Max.   :0                      Max.   :0.4627                        Max.   :0.3407                        
+                                                                                                                                       
+ F_2_VAV_SYS.COOLING.COIL.Power F_2_VAV_SYS.AIR.LOOP.INLET.Temperature F_2_VAV_SYS.AIR.LOOP.INLET.Mass.Flow.Rate
+ Min.   :    0                  Min.   :18.84                          Min.   :0.000                            
+ 1st Qu.: 3543                  1st Qu.:24.00                          1st Qu.:0.539                            
+ Median : 6013                  Median :24.08                          Median :1.788                            
+ Mean   : 7752                  Mean   :24.47                          Mean   :1.942                            
+ 3rd Qu.:12255                  3rd Qu.:24.71                          3rd Qu.:3.186                            
+ Max.   :26979                  Max.   :29.24                          Max.   :4.148                            
+                                                                                                                
+ F_2_VAV_SYS.SUPPLY.FAN.OUTLET.Temperature F_2_VAV_SYS.SUPPLY.FAN.OUTLET.Mass.Flow.Rate F_2_Z_1.RETURN.OUTLET.CO2.Concentration
+ Min.   :12.19                             Min.   :0.000                                Min.   : 429.7                         
+ 1st Qu.:12.80                             1st Qu.:0.878                                1st Qu.: 701.0                         
+ Median :12.80                             Median :2.129                                Median : 820.0                         
+ Mean   :13.24                             Mean   :2.255                                Mean   : 918.1                         
+ 3rd Qu.:12.80                             3rd Qu.:3.526                                3rd Qu.:1073.7                         
+ Max.   :26.33                             Max.   :4.148                                Max.   :2476.8                         
+                                                                                                                               
+ F_2_Z_1.SUPPLY.INLET.Temperature F_2_Z_1.SUPPLY.INLET.Mass.Flow.Rate F_2_Z_2.RETURN.OUTLET.CO2.Concentration F_2_Z_2.SUPPLY.INLET.Temperature
+ Min.   :12.19                    Min.   :0.00000                     Min.   : 430.3                          Min.   :12.19                   
+ 1st Qu.:12.80                    1st Qu.:0.02280                     1st Qu.: 711.5                          1st Qu.:12.80                   
+ Median :12.80                    Median :0.03550                     Median : 867.6                          Median :12.80                   
+ Mean   :15.05                    Mean   :0.05488                     Mean   : 991.3                          Mean   :14.60                   
+ 3rd Qu.:14.31                    3rd Qu.:0.09475                     3rd Qu.:1177.5                          3rd Qu.:12.89                   
+ Max.   :40.05                    Max.   :0.11420                     Max.   :2978.4                          Max.   :40.04                   
+                                                                                                                                              
+ F_2_Z_2.SUPPLY.INLET.Mass.Flow.Rate F_2_Z_3.RETURN.OUTLET.CO2.Concentration F_2_Z_3.SUPPLY.INLET.Temperature F_2_Z_3.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   :0.0000                      Min.   : 429.6                          Min.   :12.19                    Min.   :0.00000                    
+ 1st Qu.:0.1056                      1st Qu.: 700.9                          1st Qu.:12.80                    1st Qu.:0.02180                    
+ Median :0.2361                      Median : 815.1                          Median :12.80                    Median :0.04135                    
+ Mean   :0.3018                      Mean   : 916.1                          Mean   :14.76                    Mean   :0.05637                    
+ 3rd Qu.:0.5282                      3rd Qu.:1078.2                          3rd Qu.:13.28                    3rd Qu.:0.10900                    
+ Max.   :0.5282                      Max.   :2377.6                          Max.   :40.00                    Max.   :0.10900                    
+                                                                                                                                                 
+ F_2_Z_4.RETURN.OUTLET.CO2.Concentration F_2_Z_4.SUPPLY.INLET.Temperature F_2_Z_4.SUPPLY.INLET.Mass.Flow.Rate F_2_Z_5.RETURN.OUTLET.CO2.Concentration
+ Min.   : 431.2                          Min.   :12.19                    Min.   :0.0000                      Min.   : 428.3                         
+ 1st Qu.: 738.2                          1st Qu.:12.80                    1st Qu.:0.0783                      1st Qu.: 655.2                         
+ Median : 914.5                          Median :12.80                    Median :0.1492                      Median : 812.7                         
+ Mean   : 971.4                          Mean   :14.68                    Mean   :0.1974                      Mean   : 883.4                         
+ 3rd Qu.:1113.4                          3rd Qu.:13.25                    3rd Qu.:0.3686                      3rd Qu.:1050.2                         
+ Max.   :2710.3                          Max.   :40.00                    Max.   :0.3917                      Max.   :2397.9                         
+                                                                                                                                                     
+ F_2_Z_5.SUPPLY.INLET.Temperature F_2_Z_5.SUPPLY.INLET.Mass.Flow.Rate F_2_Z_6.RETURN.OUTLET.CO2.Concentration F_2_Z_6.SUPPLY.INLET.Temperature
+ Min.   :12.19                    Min.   :0.00000                     Min.   : 430.4                          Min.   :12.19                   
+ 1st Qu.:12.80                    1st Qu.:0.01480                     1st Qu.: 713.3                          1st Qu.:12.80                   
+ Median :12.80                    Median :0.04535                     Median : 897.6                          Median :12.80                   
+ Mean   :14.43                    Mean   :0.04124                     Mean   : 969.7                          Mean   :14.88                   
+ 3rd Qu.:12.90                    3rd Qu.:0.07053                     3rd Qu.:1148.4                          3rd Qu.:13.28                   
+ Max.   :40.00                    Max.   :0.07420                     Max.   :2579.2                          Max.   :40.04                   
+                                                                                                                                              
+ F_2_Z_6.SUPPLY.INLET.Mass.Flow.Rate F_2_Z_7.RETURN.OUTLET.CO2.Concentration F_2_Z_7.SUPPLY.INLET.Temperature F_2_Z_7.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   :0.0000                      Min.   : 430.1                          Min.   :12.19                    Min.   :0.00000                    
+ 1st Qu.:0.1084                      1st Qu.: 712.8                          1st Qu.:12.80                    1st Qu.:0.02710                    
+ Median :0.1479                      Median : 841.1                          Median :12.80                    Median :0.03275                    
+ Mean   :0.2808                      Mean   : 928.8                          Mean   :15.29                    Mean   :0.06064                    
+ 3rd Qu.:0.5304                      3rd Qu.:1075.4                          3rd Qu.:17.57                    3rd Qu.:0.09530                    
+ Max.   :0.5419                      Max.   :2453.7                          Max.   :40.07                    Max.   :0.13550                    
+                                                                                                                                                 
+ F_2_Z_8.RETURN.OUTLET.CO2.Concentration F_2_Z_8.SUPPLY.INLET.Temperature F_2_Z_8.SUPPLY.INLET.Mass.Flow.Rate F_2_Z_9.RETURN.OUTLET.CO2.Concentration
+ Min.   : 431.5                          Min.   :12.19                    Min.   :0.0000                      Min.   : 433.5                         
+ 1st Qu.: 749.5                          1st Qu.:12.80                    1st Qu.:0.0932                      1st Qu.: 816.5                         
+ Median : 904.1                          Median :12.80                    Median :0.0932                      Median :1030.7                         
+ Mean   : 980.8                          Mean   :15.25                    Mean   :0.2031                      Mean   :1078.0                         
+ 3rd Qu.:1137.6                          3rd Qu.:16.49                    3rd Qu.:0.3538                      3rd Qu.:1182.4                         
+ Max.   :2613.4                          Max.   :40.04                    Max.   :0.4661                      Max.   :3153.2                         
+                                                                                                                                                     
+ F_2_Z_9.SUPPLY.INLET.Temperature F_2_Z_9.SUPPLY.INLET.Mass.Flow.Rate F_2_Z_10.RETURN.OUTLET.CO2.Concentration F_2_Z_10.SUPPLY.INLET.Temperature
+ Min.   :12.19                    Min.   :0.0000                      Min.   : 433.5                           Min.   :12.19                    
+ 1st Qu.:12.80                    1st Qu.:0.0597                      1st Qu.: 832.6                           1st Qu.:12.80                    
+ Median :12.80                    Median :0.1099                      Median :1112.3                           Median :12.80                    
+ Mean   :14.71                    Mean   :0.1667                      Mean   :1148.0                           Mean   :14.67                    
+ 3rd Qu.:12.87                    3rd Qu.:0.2985                      3rd Qu.:1268.4                           3rd Qu.:12.87                    
+ Max.   :40.01                    Max.   :0.2985                      Max.   :3629.3                           Max.   :40.01                    
+                                                                                                                                                
+ F_2_Z_10.SUPPLY.INLET.Mass.Flow.Rate F_2_Z_11.RETURN.OUTLET.CO2.Concentration F_2_Z_11.SUPPLY.INLET.Temperature F_2_Z_11.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   :0.00000                      Min.   : 433.5                           Min.   :12.19                     Min.   :0.00000                     
+ 1st Qu.:0.03830                      1st Qu.: 824.9                           1st Qu.:12.80                     1st Qu.:0.01100                     
+ Median :0.08075                      Median :1037.4                           Median :12.80                     Median :0.01935                     
+ Mean   :0.11138                      Mean   :1152.1                           Mean   :14.78                     Mean   :0.02962                     
+ 3rd Qu.:0.19140                      3rd Qu.:1299.1                           3rd Qu.:12.91                     3rd Qu.:0.05480                     
+ Max.   :0.19140                      Max.   :3867.5                           Max.   :40.04                     Max.   :0.05480                     
+                                                                                                                                                     
+ F_2_Z_12A.RETURN.OUTLET.CO2.Concentration F_2_Z_12A.SUPPLY.INLET.Temperature F_2_Z_12A.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   : 433.5                            Min.   :12.19                      Min.   :0.0000                       
+ 1st Qu.: 766.5                            1st Qu.:12.80                      1st Qu.:0.0369                       
+ Median : 960.6                            Median :12.80                      Median :0.1692                       
+ Mean   : 970.1                            Mean   :13.87                      Mean   :0.1241                       
+ 3rd Qu.:1088.3                            3rd Qu.:12.87                      3rd Qu.:0.1845                       
+ Max.   :2473.6                            Max.   :40.07                      Max.   :0.1845                       
+                                                                                                                   
+ F_2_Z_12B.RETURN.OUTLET.CO2.Concentration F_2_Z_12B.SUPPLY.INLET.Temperature F_2_Z_12B.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   : 126.1                            Min.   :12.19                      Min.   :0.00000                      
+ 1st Qu.: 267.1                            1st Qu.:12.80                      1st Qu.:0.08687                      
+ Median : 466.0                            Median :12.80                      Median :0.30350                      
+ Mean   : 572.9                            Mean   :13.57                      Mean   :0.21586                      
+ 3rd Qu.: 890.1                            3rd Qu.:12.84                      3rd Qu.:0.30350                      
+ Max.   :1649.4                            Max.   :40.01                      Max.   :0.30350                      
+                                                                                                                   
+ F_2_Z_12C.RETURN.OUTLET.CO2.Concentration F_2_Z_12C.SUPPLY.INLET.Temperature F_2_Z_12C.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   : 433.5                            Min.   :12.19                      Min.   :0.00000                      
+ 1st Qu.: 763.0                            1st Qu.:12.80                      1st Qu.:0.06678                      
+ Median : 961.1                            Median :12.80                      Median :0.26435                      
+ Mean   : 961.4                            Mean   :13.67                      Mean   :0.19272                      
+ 3rd Qu.:1082.4                            3rd Qu.:12.85                      3rd Qu.:0.27910                      
+ Max.   :2383.0                            Max.   :40.03                      Max.   :0.27910                      
+                                                                                                                   
+ F_2_Z_14.RETURN.OUTLET.CO2.Concentration F_2_Z_14.SUPPLY.INLET.Temperature F_2_Z_14.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   : 433.5                           Min.   :12.19                     Min.   :0.0000                      
+ 1st Qu.: 789.1                           1st Qu.:12.80                     1st Qu.:0.0567                      
+ Median :1041.6                           Median :12.80                     Median :0.0567                      
+ Mean   :1162.5                           Mean   :15.58                     Mean   :0.1210                      
+ 3rd Qu.:1294.9                           3rd Qu.:18.39                     3rd Qu.:0.2834                      
+ Max.   :4470.2                           Max.   :40.05                     Max.   :0.2834                      
+                                                                                                                
+ F_2_Z_15.RETURN.OUTLET.CO2.Concentration F_2_Z_15.SUPPLY.INLET.Temperature F_2_Z_15.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   : 433.5                           Min.   :12.19                     Min.   :0.00000                     
+ 1st Qu.: 816.7                           1st Qu.:12.80                     1st Qu.:0.01020                     
+ Median :1027.3                           Median :12.80                     Median :0.01990                     
+ Mean   :1116.2                           Mean   :14.72                     Mean   :0.02788                     
+ 3rd Qu.:1252.8                           3rd Qu.:12.90                     3rd Qu.:0.05100                     
+ Max.   :3536.3                           Max.   :40.03                     Max.   :0.05100                     
+                                                                                                                
+ F_2_Z_16.RETURN.OUTLET.CO2.Concentration F_2_Z_16.SUPPLY.INLET.Temperature F_2_Z_16.SUPPLY.INLET.Mass.Flow.Rate F_3_Z_1..Lights.Power
+ Min.   : 433.5                           Min.   :12.19                     Min.   :0.00000                      Min.   :  0.00       
+ 1st Qu.: 771.0                           1st Qu.:12.80                     1st Qu.:0.02820                      1st Qu.:  0.00       
+ Median : 992.5                           Median :12.80                     Median :0.04665                      Median :  0.00       
+ Mean   : 993.1                           Mean   :15.30                     Mean   :0.06967                      Mean   : 99.13       
+ 3rd Qu.:1116.5                           3rd Qu.:16.62                     3rd Qu.:0.14120                      3rd Qu.:  0.00       
+ Max.   :2703.1                           Max.   :40.06                     Max.   :0.14120                      Max.   :479.83       
+                                                                                                                                      
+ F_3_Z_10..Lights.Power F_3_Z_11A..Lights.Power F_3_Z_11B..Lights.Power F_3_Z_11C..Lights.Power F_3_Z_2..Lights.Power F_3_Z_3..Lights.Power
+ Min.   :  0.0          Min.   :807.7           Min.   :2079            Min.   :1193            Min.   :   0.0        Min.   :  0.0        
+ 1st Qu.:  0.0          1st Qu.:807.7           1st Qu.:2079            1st Qu.:1193            1st Qu.:   0.0        1st Qu.:  0.0        
+ Median :  0.0          Median :807.7           Median :2079            Median :1193            Median :   0.0        Median :  0.0        
+ Mean   :189.6          Mean   :807.7           Mean   :2079            Mean   :1193            Mean   : 557.4        Mean   :193.8        
+ 3rd Qu.:639.8          3rd Qu.:807.7           3rd Qu.:2079            3rd Qu.:1193            3rd Qu.:1727.4        3rd Qu.:755.7        
+ Max.   :639.8          Max.   :807.7           Max.   :2079            Max.   :1193            Max.   :1727.4        Max.   :755.7        
+                                                                                                                                           
+ F_3_Z_5..Lights.Power F_3_Z_6..Lights.Power F_3_Z_7..Lights.Power F_3_Z_8..Lights.Power F_3_Z_9..Lights.Power F_3_Z_9..Equipment.Power
+ Min.   :  0.00        Min.   :   0.0        Min.   :  0.00        Min.   :   0.0        Min.   :  0.00        Min.   :30240           
+ 1st Qu.:  0.00        1st Qu.:   0.0        1st Qu.:  0.00        1st Qu.:   0.0        1st Qu.:  0.00        1st Qu.:30240           
+ Median :  0.00        Median :   0.0        Median :  0.00        Median :   0.0        Median :  0.00        Median :30240           
+ Mean   : 20.64        Mean   : 590.4        Mean   : 81.72        Mean   : 382.9        Mean   : 85.97        Mean   :30240           
+ 3rd Qu.:  0.00        3rd Qu.:1951.3        3rd Qu.:319.88        3rd Qu.:1199.6        3rd Qu.:335.88        3rd Qu.:30240           
+ Max.   :967.65        Max.   :1951.3        Max.   :319.88        Max.   :1199.6        Max.   :335.88        Max.   :30240           
+                                                                                                                                       
+ F_3_Z_1..Equipment.Power F_3_Z_10..Equipment.Power F_3_Z_11A..Equipment.Power F_3_Z_11B..Equipment.Power F_3_Z_11C..Equipment.Power
+ Min.   : 67.18           Min.   : 89.57            Min.   :600.5              Min.   :1546               Min.   :886.7             
+ 1st Qu.: 67.18           1st Qu.: 89.57            1st Qu.:600.5              1st Qu.:1546               1st Qu.:886.7             
+ Median : 67.18           Median : 89.57            Median :600.5              Median :1546               Median :886.7             
+ Mean   :122.69           Mean   :195.75            Mean   :600.5              Mean   :1546               Mean   :886.7             
+ 3rd Qu.: 67.18           3rd Qu.:447.84            3rd Qu.:600.5              3rd Qu.:1546               3rd Qu.:886.7             
+ Max.   :335.88           Max.   :447.84            Max.   :600.5              Max.   :1546               Max.   :886.7             
+                                                                                                                                    
+ F_3_Z_2..Equipment.Power F_3_Z_3..Equipment.Power F_3_Z_5..Equipment.Power F_3_Z_6..Equipment.Power F_3_Z_7..Equipment.Power F_3_Z_8..Equipment.Power
+ Min.   : 241.8           Min.   :105.8            Min.   :135.5            Min.   : 273.2           Min.   : 44.78           Min.   :167.9           
+ 1st Qu.: 241.8           1st Qu.:105.8            1st Qu.:135.5            1st Qu.: 273.2           1st Qu.: 44.78           1st Qu.:167.9           
+ Median : 241.8           Median :105.8            Median :135.5            Median : 273.2           Median : 44.78           Median :167.9           
+ Mean   : 554.0           Mean   :214.3            Mean   :147.0            Mean   : 603.8           Mean   : 90.54           Mean   :382.4           
+ 3rd Qu.:1209.2           3rd Qu.:529.0            3rd Qu.:135.5            3rd Qu.:1365.9           3rd Qu.:223.92           3rd Qu.:839.7           
+ Max.   :1209.2           Max.   :529.0            Max.   :677.4            Max.   :1365.9           Max.   :223.92           Max.   :839.7           
+                                                                                                                                                      
+ F_3_Z_1..Thermostat.Temp F_3_Z_1..Thermostat.Heating.Setpoint F_3_Z_1..Thermostat.Cooling.Setpoint F_3_Z_10..Thermostat.Temp
+ Min.   :19.86            Min.   : 7.00                        Min.   :10.0                         Min.   :20.86            
+ 1st Qu.:22.63            1st Qu.: 7.00                        1st Qu.:10.0                         1st Qu.:24.00            
+ Median :30.67            Median :32.22                        Median :35.2                         Median :24.00            
+ Mean   :27.44            Mean   :22.91                        Mean   :26.4                         Mean   :24.60            
+ 3rd Qu.:32.03            3rd Qu.:32.22                        3rd Qu.:35.2                         3rd Qu.:24.70            
+ Max.   :32.24            Max.   :32.22                        Max.   :35.2                         Max.   :30.88            
+                                                                                                                             
+ F_3_Z_10..Thermostat.Heating.Setpoint F_3_Z_10..Thermostat.Cooling.Setpoint F_3_Z_11A..Thermostat.Temp F_3_Z_11A..Thermostat.Heating.Setpoint
+ Min.   :12.60                         Min.   :15.56                         Min.   :22.28              Min.   :12.60                         
+ 1st Qu.:20.00                         1st Qu.:24.00                         1st Qu.:24.00              1st Qu.:20.00                         
+ Median :21.00                         Median :24.00                         Median :24.00              Median :21.00                         
+ Mean   :21.03                         Mean   :24.13                         Mean   :24.73              Mean   :21.03                         
+ 3rd Qu.:24.00                         3rd Qu.:25.00                         3rd Qu.:25.00              3rd Qu.:24.00                         
+ Max.   :26.67                         Max.   :29.70                         Max.   :30.20              Max.   :26.67                         
+                                                                                                                                              
+ F_3_Z_11A..Thermostat.Cooling.Setpoint F_3_Z_11B..Thermostat.Temp F_3_Z_11B..Thermostat.Heating.Setpoint F_3_Z_11B..Thermostat.Cooling.Setpoint
+ Min.   :15.56                          Min.   :22.86              Min.   :12.60                          Min.   :15.56                         
+ 1st Qu.:24.00                          1st Qu.:24.00              1st Qu.:20.00                          1st Qu.:24.00                         
+ Median :24.00                          Median :24.18              Median :21.00                          Median :24.00                         
+ Mean   :24.13                          Mean   :24.97              Mean   :21.03                          Mean   :24.13                         
+ 3rd Qu.:25.00                          3rd Qu.:25.00              3rd Qu.:24.00                          3rd Qu.:25.00                         
+ Max.   :29.70                          Max.   :34.51              Max.   :26.67                          Max.   :29.70                         
+                                                                                                                                                
+ F_3_Z_11C..Thermostat.Temp F_3_Z_11C..Thermostat.Heating.Setpoint F_3_Z_11C..Thermostat.Cooling.Setpoint F_3_Z_2..Thermostat.Temp
+ Min.   :22.65              Min.   :12.60                          Min.   :15.56                          Min.   :19.93           
+ 1st Qu.:24.00              1st Qu.:17.80                          1st Qu.:24.00                          1st Qu.:24.00           
+ Median :24.00              Median :21.00                          Median :24.00                          Median :24.00           
+ Mean   :24.81              Mean   :20.90                          Mean   :24.17                          Mean   :24.26           
+ 3rd Qu.:25.00              3rd Qu.:24.00                          3rd Qu.:25.60                          3rd Qu.:24.06           
+ Max.   :30.54              Max.   :26.67                          Max.   :29.70                          Max.   :30.64           
+                                                                                                                                  
+ F_3_Z_2..Thermostat.Heating.Setpoint F_3_Z_2..Thermostat.Cooling.Setpoint F_3_Z_3..Thermostat.Temp F_3_Z_3..Thermostat.Heating.Setpoint
+ Min.   :12.60                        Min.   :15.56                        Min.   :20.83            Min.   :12.60                       
+ 1st Qu.:20.00                        1st Qu.:24.00                        1st Qu.:24.00            1st Qu.:20.00                       
+ Median :21.00                        Median :24.00                        Median :24.00            Median :21.00                       
+ Mean   :21.03                        Mean   :24.13                        Mean   :24.49            Mean   :21.03                       
+ 3rd Qu.:24.00                        3rd Qu.:25.00                        3rd Qu.:24.46            3rd Qu.:24.00                       
+ Max.   :26.67                        Max.   :29.70                        Max.   :30.60            Max.   :26.67                       
+                                                                                                                                        
+ F_3_Z_3..Thermostat.Cooling.Setpoint F_3_Z_5..Thermostat.Temp F_3_Z_5..Thermostat.Heating.Setpoint F_3_Z_5..Thermostat.Cooling.Setpoint
+ Min.   :15.56                        Min.   :22.54            Min.   :12.60                        Min.   :15.56                       
+ 1st Qu.:24.00                        1st Qu.:24.00            1st Qu.:20.00                        1st Qu.:24.00                       
+ Median :24.00                        Median :24.00            Median :21.00                        Median :24.00                       
+ Mean   :24.13                        Mean   :24.72            Mean   :21.10                        Mean   :24.20                       
+ 3rd Qu.:25.00                        3rd Qu.:25.60            3rd Qu.:24.00                        3rd Qu.:25.00                       
+ Max.   :29.70                        Max.   :28.98            Max.   :26.67                        Max.   :29.70                       
+                                                                                                                                        
+ F_3_Z_6..Thermostat.Temp F_3_Z_6..Thermostat.Heating.Setpoint F_3_Z_6..Thermostat.Cooling.Setpoint F_3_Z_7..Thermostat.Temp
+ Min.   :19.72            Min.   :12.60                        Min.   :15.56                        Min.   :18.17           
+ 1st Qu.:24.00            1st Qu.:20.00                        1st Qu.:24.00                        1st Qu.:23.32           
+ Median :24.00            Median :21.00                        Median :24.00                        Median :24.00           
+ Mean   :24.22            Mean   :21.10                        Mean   :24.20                        Mean   :23.74           
+ 3rd Qu.:24.00            3rd Qu.:24.00                        3rd Qu.:25.00                        3rd Qu.:24.00           
+ Max.   :30.60            Max.   :26.67                        Max.   :29.70                        Max.   :30.24           
+                                                                                                                            
+ F_3_Z_7..Thermostat.Heating.Setpoint F_3_Z_7..Thermostat.Cooling.Setpoint F_3_Z_8..Thermostat.Temp F_3_Z_8..Thermostat.Heating.Setpoint
+ Min.   :12.60                        Min.   :15.56                        Min.   :18.32            Min.   :12.60                       
+ 1st Qu.:20.00                        1st Qu.:24.00                        1st Qu.:24.00            1st Qu.:21.00                       
+ Median :21.00                        Median :24.00                        Median :24.00            Median :21.00                       
+ Mean   :21.03                        Mean   :24.13                        Mean   :24.27            Mean   :21.77                       
+ 3rd Qu.:24.00                        3rd Qu.:25.00                        3rd Qu.:24.00            3rd Qu.:24.00                       
+ Max.   :26.67                        Max.   :29.70                        Max.   :32.22            Max.   :32.22                       
+                                                                                                                                        
+ F_3_Z_8..Thermostat.Cooling.Setpoint F_3_Z_9..Thermostat.Temp F_3_Z_9..Thermostat.Heating.Setpoint F_3_Z_9..Thermostat.Cooling.Setpoint
+ Min.   :15.56                        Min.   :19.18            Min.   :12.60                        Min.   :15.56                       
+ 1st Qu.:24.00                        1st Qu.:19.27            1st Qu.:18.10                        1st Qu.:21.10                       
+ Median :24.00                        Median :19.67            Median :18.10                        Median :21.10                       
+ Mean   :24.88                        Mean   :21.00            Mean   :18.36                        Mean   :21.36                       
+ 3rd Qu.:25.88                        3rd Qu.:21.10            3rd Qu.:18.10                        3rd Qu.:21.10                       
+ Max.   :35.20                        Max.   :36.34            Max.   :26.67                        Max.   :29.70                       
+                                                                                                                                        
+ F_3.VAV.Availability.Manager.Night.Cycle.Control.Status F_3_VAV_SYS.SUPPLY.FAN.Fan.Power F_3_BATH_EXHAUST.Fan.Power F_3_Z_1.VAV.REHEAT.Damper.Position
+ Min.   :0                                               Min.   : 838.1                   Min.   : 0.00              Min.   :0.2000                    
+ 1st Qu.:0                                               1st Qu.:4096.5                   1st Qu.: 0.00              1st Qu.:0.2000                    
+ Median :0                                               Median :5862.4                   Median :47.17              Median :1.0000                    
+ Mean   :0                                               Mean   :5836.3                   Mean   :23.86              Mean   :0.6555                    
+ 3rd Qu.:0                                               3rd Qu.:8160.8                   3rd Qu.:47.17              3rd Qu.:1.0000                    
+ Max.   :0                                               Max.   :8160.8                   Max.   :47.17              Max.   :1.0000                    
+                                                                                                                                                       
+ F_3_Z_2.VAV.REHEAT.Damper.Position F_3_Z_3.VAV.REHEAT.Damper.Position F_3_Z_5.VAV.REHEAT.Damper.Position F_3_Z_6.VAV.REHEAT.Damper.Position
+ Min.   :0.2000                     Min.   :0.2000                     Min.   :0.2000                     Min.   :0.2000                    
+ 1st Qu.:0.2542                     1st Qu.:0.2826                     1st Qu.:0.4299                     1st Qu.:0.2000                    
+ Median :1.0000                     Median :0.9702                     Median :0.9670                     Median :0.9029                    
+ Mean   :0.7350                     Mean   :0.7191                     Mean   :0.7433                     Mean   :0.6963                    
+ 3rd Qu.:1.0000                     3rd Qu.:1.0000                     3rd Qu.:1.0000                     3rd Qu.:1.0000                    
+ Max.   :1.0000                     Max.   :1.0000                     Max.   :1.0000                     Max.   :1.0000                    
+                                                                                                                                            
+ F_3_Z_7.VAV.REHEAT.Damper.Position F_3_Z_8.VAV.REHEAT.Damper.Position F_3_Z_10.VAV.REHEAT.Damper.Position F_3_Z_11A.VAV.REHEAT.Damper.Position
+ Min.   :0.2000                     Min.   :0.2000                     Min.   :0.2000                      Min.   :0.2000                      
+ 1st Qu.:0.2000                     1st Qu.:0.2000                     1st Qu.:0.3703                      1st Qu.:0.7433                      
+ Median :0.6165                     Median :0.5448                     Median :1.0000                      Median :1.0000                      
+ Mean   :0.6299                     Mean   :0.6053                     Mean   :0.7472                      Mean   :0.7923                      
+ 3rd Qu.:1.0000                     3rd Qu.:1.0000                     3rd Qu.:1.0000                      3rd Qu.:1.0000                      
+ Max.   :1.0000                     Max.   :1.0000                     Max.   :1.0000                      Max.   :1.0000                      
+                                                                                                                                               
+ F_3_Z_11B.VAV.REHEAT.Damper.Position F_3_Z_11C.VAV.REHEAT.Damper.Position F_3_Z_9.VAV.Damper.Position F_3_Z_1.REHEAT.COIL.Power
+ Min.   :0.2000                       Min.   :0.2000                       Min.   :0.2699              Min.   :   0.0           
+ 1st Qu.:0.9248                       1st Qu.:0.8215                       1st Qu.:0.7658              1st Qu.:   0.0           
+ Median :1.0000                       Median :1.0000                       Median :1.0000              Median : 873.1           
+ Mean   :0.8509                       Mean   :0.8232                       Mean   :0.8513              Mean   :1872.2           
+ 3rd Qu.:1.0000                       3rd Qu.:1.0000                       3rd Qu.:1.0000              3rd Qu.:4069.8           
+ Max.   :1.0000                       Max.   :1.0000                       Max.   :1.0000              Max.   :4069.8           
+                                                                                                                                
+ F_3_Z_2.REHEAT.COIL.Power F_3_Z_3.REHEAT.COIL.Power F_3_Z_5.REHEAT.COIL.Power F_3_Z_6.REHEAT.COIL.Power F_3_Z_7.REHEAT.COIL.Power
+ Min.   :   0              Min.   :   0.0            Min.   :   0.0            Min.   :    0             Min.   :   0.0           
+ 1st Qu.:   0              1st Qu.:   0.0            1st Qu.:   0.0            1st Qu.:    0             1st Qu.:   0.0           
+ Median :   0              Median :   0.0            Median :   0.0            Median :    0             Median :   0.0           
+ Mean   :1042              Mean   : 380.3            Mean   : 121.8            Mean   : 1360             Mean   : 477.6           
+ 3rd Qu.:2528              3rd Qu.:1015.5            3rd Qu.: 266.7            3rd Qu.: 3386             3rd Qu.:1204.5           
+ Max.   :9764              Max.   :3448.0            Max.   :2166.7            Max.   :11585             Max.   :3603.8           
+                                                                                                                                  
+ F_3_Z_8.REHEAT.COIL.Power F_3_Z_10.REHEAT.COIL.Power F_3_Z_11A.REHEAT.COIL.Power F_3_Z_11B.REHEAT.COIL.Power F_3_Z_11C.REHEAT.COIL.Power
+ Min.   :    0             Min.   :   0.0             Min.   :   0.0              Min.   :   0.0              Min.   :   0.0             
+ 1st Qu.:    0             1st Qu.:   0.0             1st Qu.:   0.0              1st Qu.:   0.0              1st Qu.:   0.0             
+ Median :    0             Median :   0.0             Median :   0.0              Median :   0.0              Median :   0.0             
+ Mean   : 1694             Mean   : 337.6             Mean   : 217.3              Mean   : 287.8              Mean   : 234.9             
+ 3rd Qu.: 4222             3rd Qu.: 922.1             3rd Qu.: 446.3              3rd Qu.: 644.6              3rd Qu.: 465.4             
+ Max.   :12087             Max.   :3404.9             Max.   :5955.4              Max.   :1456.7              Max.   :9733.6             
+                                                                                                                                         
+ F_3_Z_12.REHEAT.COIL.Power F_3_VAV_SYS.HEATING.COIL.Power F_3_VAV_SYS.Outdoor.Air.Flow.Fraction F_3_VAV_SYS.Outdoor.Air.Mass.Flow.Rate
+ Min.   :0                  Min.   :0                      Min.   :0.00000                       Min.   :0.0000                        
+ 1st Qu.:0                  1st Qu.:0                      1st Qu.:0.00000                       1st Qu.:0.0000                        
+ Median :0                  Median :0                      Median :0.04810                       Median :0.3407                        
+ Mean   :0                  Mean   :0                      Mean   :0.03813                       Mean   :0.1724                        
+ 3rd Qu.:0                  3rd Qu.:0                      3rd Qu.:0.06050                       3rd Qu.:0.3407                        
+ Max.   :0                  Max.   :0                      Max.   :0.18670                       Max.   :0.3407                        
+                                                                                                                                       
+ F_3_VAV_SYS.COOLING.COIL.Power F_3_VAV_SYS.AIR.LOOP.INLET.Temperature F_3_VAV_SYS.AIR.LOOP.INLET.Mass.Flow.Rate
+ Min.   :    0                  Min.   :19.89                          Min.   :1.485                            
+ 1st Qu.: 9857                  1st Qu.:21.42                          1st Qu.:4.529                            
+ Median :16756                  Median :21.58                          Median :5.525                            
+ Mean   :14573                  Mean   :22.39                          Mean   :5.512                            
+ 3rd Qu.:17852                  3rd Qu.:22.31                          3rd Qu.:7.087                            
+ Max.   :24421                  Max.   :33.89                          Max.   :7.087                            
+                                                                                                                
+ F_3_VAV_SYS.SUPPLY.FAN.OUTLET.Temperature F_3_VAV_SYS.SUPPLY.FAN.OUTLET.Mass.Flow.Rate F_3_Z_1.RETURN.OUTLET.CO2.Concentration
+ Min.   :12.28                             Min.   :1.825                                Min.   : 401.4                         
+ 1st Qu.:12.80                             1st Qu.:4.774                                1st Qu.: 419.6                         
+ Median :12.80                             Median :5.865                                Median : 492.4                         
+ Mean   :12.89                             Mean   :5.684                                Mean   : 589.9                         
+ 3rd Qu.:12.80                             3rd Qu.:7.087                                3rd Qu.: 661.9                         
+ Max.   :31.34                             Max.   :7.087                                Max.   :1402.0                         
+                                                                                                                               
+ F_3_Z_1.SUPPLY.INLET.Temperature F_3_Z_1.SUPPLY.INLET.Mass.Flow.Rate F_3_Z_2.RETURN.OUTLET.CO2.Concentration F_3_Z_2.SUPPLY.INLET.Temperature
+ Min.   :12.33                    Min.   :0.03330                     Min.   : 401.4                          Min.   :12.28                   
+ 1st Qu.:12.80                    1st Qu.:0.09728                     1st Qu.: 417.7                          1st Qu.:12.80                   
+ Median :35.95                    Median :0.16630                     Median : 493.8                          Median :12.80                   
+ Mean   :26.39                    Mean   :0.13166                     Mean   : 604.8                          Mean   :15.50                   
+ 3rd Qu.:36.84                    3rd Qu.:0.16630                     3rd Qu.: 709.7                          3rd Qu.:19.15                   
+ Max.   :40.12                    Max.   :0.16630                     Max.   :1551.7                          Max.   :39.98                   
+                                                                                                                                              
+ F_3_Z_2.SUPPLY.INLET.Mass.Flow.Rate F_3_Z_3.RETURN.OUTLET.CO2.Concentration F_3_Z_3.SUPPLY.INLET.Temperature F_3_Z_3.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   :0.0798                      Min.   : 401.5                          Min.   :12.28                    Min.   :0.02820                    
+ 1st Qu.:0.1021                      1st Qu.: 417.0                          1st Qu.:12.80                    1st Qu.:0.04235                    
+ Median :0.3990                      Median : 505.8                          Median :12.80                    Median :0.13680                    
+ Mean   :0.2935                      Mean   : 614.4                          Mean   :15.64                    Mean   :0.10152                    
+ 3rd Qu.:0.3990                      3rd Qu.: 714.9                          3rd Qu.:19.90                    3rd Qu.:0.14090                    
+ Max.   :0.3990                      Max.   :1580.9                          Max.   :40.00                    Max.   :0.14090                    
+                                                                                                                                                 
+ F_3_Z_5.RETURN.OUTLET.CO2.Concentration F_3_Z_5.SUPPLY.INLET.Temperature F_3_Z_5.SUPPLY.INLET.Mass.Flow.Rate F_3_Z_6.RETURN.OUTLET.CO2.Concentration
+ Min.   : 401.6                          Min.   :12.28                    Min.   :0.01770                     Min.   : 401.4                         
+ 1st Qu.: 417.2                          1st Qu.:12.80                    1st Qu.:0.03955                     1st Qu.: 417.1                         
+ Median : 504.6                          Median :12.80                    Median :0.08630                     Median : 492.0                         
+ Mean   : 585.9                          Mean   :14.55                    Mean   :0.06597                     Mean   : 602.7                         
+ 3rd Qu.: 661.4                          3rd Qu.:15.98                    3rd Qu.:0.08850                     3rd Qu.: 700.7                         
+ Max.   :1244.0                          Max.   :40.05                    Max.   :0.08850                     Max.   :1522.9                         
+                                                                                                                                                     
+ F_3_Z_6.SUPPLY.INLET.Temperature F_3_Z_6.SUPPLY.INLET.Mass.Flow.Rate F_3_Z_7.RETURN.OUTLET.CO2.Concentration F_3_Z_7.SUPPLY.INLET.Temperature
+ Min.   :12.28                    Min.   :0.0947                      Min.   : 401.4                          Min.   :12.28                   
+ 1st Qu.:12.80                    1st Qu.:0.0947                      1st Qu.: 418.6                          1st Qu.:12.80                   
+ Median :12.80                    Median :0.4276                      Median : 491.9                          Median :12.80                   
+ Mean   :15.82                    Mean   :0.3300                      Mean   : 592.3                          Mean   :16.34                   
+ 3rd Qu.:19.99                    3rd Qu.:0.4734                      3rd Qu.: 688.6                          3rd Qu.:21.33                   
+ Max.   :40.02                    Max.   :0.4734                      Max.   :1427.4                          Max.   :40.02                   
+                                                                                                                                              
+ F_3_Z_7.SUPPLY.INLET.Mass.Flow.Rate F_3_Z_8.RETURN.OUTLET.CO2.Concentration F_3_Z_8.SUPPLY.INLET.Temperature F_3_Z_8.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   :0.02950                     Min.   : 401.4                          Min.   :12.28                    Min.   :0.0988                     
+ 1st Qu.:0.02950                     1st Qu.: 421.0                          1st Qu.:12.80                    1st Qu.:0.0988                     
+ Median :0.09090                     Median : 494.9                          Median :12.80                    Median :0.2706                     
+ Mean   :0.09289                     Mean   : 597.9                          Mean   :17.00                    Mean   :0.3012                     
+ 3rd Qu.:0.14730                     3rd Qu.: 687.0                          3rd Qu.:21.62                    3rd Qu.:0.4939                     
+ Max.   :0.14730                     Max.   :1448.4                          Max.   :40.04                    Max.   :0.4939                     
+                                                                                                                                                 
+ F_3_Z_9.RETURN.OUTLET.CO2.Concentration F_3_Z_9.SUPPLY.INLET.Temperature F_3_Z_9.SUPPLY.INLET.Mass.Flow.Rate F_3_Z_10.RETURN.OUTLET.CO2.Concentration
+ Min.   : 401.5                          Min.   :12.28                    Min.   :1.062                       Min.   : 401.5                          
+ 1st Qu.: 416.3                          1st Qu.:12.80                    1st Qu.:3.013                       1st Qu.: 423.1                          
+ Median : 494.4                          Median :12.80                    Median :3.935                       Median : 504.7                          
+ Mean   : 586.1                          Mean   :12.89                    Mean   :3.350                       Mean   : 628.8                          
+ 3rd Qu.: 657.7                          3rd Qu.:12.80                    3rd Qu.:3.935                       3rd Qu.: 736.2                          
+ Max.   :1372.7                          Max.   :31.34                    Max.   :3.935                       Max.   :1674.9                          
+                                                                                                                                                      
+ F_3_Z_10.SUPPLY.INLET.Temperature F_3_Z_10.SUPPLY.INLET.Mass.Flow.Rate F_3_Z_11A.RETURN.OUTLET.CO2.Concentration F_3_Z_11A.SUPPLY.INLET.Temperature
+ Min.   :12.28                     Min.   :0.02780                      Min.   : 401.5                            Min.   :12.28                     
+ 1st Qu.:12.80                     1st Qu.:0.05217                      1st Qu.: 417.3                            1st Qu.:12.80                     
+ Median :12.80                     Median :0.13910                      Median : 499.3                            Median :12.80                     
+ Mean   :15.33                     Mean   :0.10405                      Mean   : 579.1                            Mean   :13.90                     
+ 3rd Qu.:19.34                     3rd Qu.:0.13910                      3rd Qu.: 652.9                            3rd Qu.:14.71                     
+ Max.   :39.98                     Max.   :0.13910                      Max.   :1294.7                            Max.   :39.98                     
+                                                                                                                                                    
+ F_3_Z_11A.SUPPLY.INLET.Mass.Flow.Rate F_3_Z_11B.RETURN.OUTLET.CO2.Concentration F_3_Z_11B.SUPPLY.INLET.Temperature
+ Min.   :0.0487                        Min.   : 125.3                            Min.   :12.28                     
+ 1st Qu.:0.1821                        1st Qu.: 411.1                            1st Qu.:12.80                     
+ Median :0.2433                        Median : 484.8                            Median :12.80                     
+ Mean   :0.1930                        Mean   : 523.6                            Mean   :13.51                     
+ 3rd Qu.:0.2433                        3rd Qu.: 617.7                            3rd Qu.:14.21                     
+ Max.   :0.2433                        Max.   :1202.6                            Max.   :31.34                     
+                                                                                                                   
+ F_3_Z_11B.SUPPLY.INLET.Mass.Flow.Rate F_3_Z_11C.RETURN.OUTLET.CO2.Concentration F_3_Z_11C.SUPPLY.INLET.Temperature
+ Min.   :0.0924                        Min.   : 401.5                            Min.   :12.28                     
+ 1st Qu.:0.4273                        1st Qu.: 416.7                            1st Qu.:12.80                     
+ Median :0.4621                        Median : 497.3                            Median :12.80                     
+ Mean   :0.3932                        Mean   : 578.8                            Mean   :13.50                     
+ 3rd Qu.:0.4621                        3rd Qu.: 653.2                            3rd Qu.:13.99                     
+ Max.   :0.4621                        Max.   :1309.9                            Max.   :39.98                     
+                                                                                                                   
+ F_3_Z_11C.SUPPLY.INLET.Mass.Flow.Rate
+ Min.   :0.0795                       
+ 1st Qu.:0.3272                       
+ Median :0.3977                       
+ Mean   :0.3276                       
+ 3rd Qu.:0.3977                       
+ Max.   :0.3977                       
+                                      
+> 
