@@ -1,0 +1,31 @@
+
+
+setwd=("C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016")
+
+install.packages("reshape")
+library(reshape)
+
+install.packages("ggplot2")
+library(ggplot2)
+
+install.packages("plotly")
+library(plotly)
+
+
+
+fichero1 <- read.csv(file="C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016/bldg-MC2.csv", header=T, sep = ",")
+
+
+
+
+fichero14 <- (fichero1[,c(1,14)])
+fichero14$Date.Time = as.POSIXct(fichero14$Date.Time, format="%Y-%m-%d %H:%M:%S",tz="CET")
+fichero14$hour <- as.numeric(format(fichero14$Date.Time, format="%H"))
+fichero14$Date.Time <- format(fichero14$Date.Time, format="%Y-%m-%d %H")
+fichero <- melt (fichero14, c("Date.Time"))
+fichero <-cast (fichero, Date.Time~variable, mean)
+fichero$Date.Time = as.POSIXct(fichero$Date.Time, format="%Y-%m-%d",tz="CET")
+sp <- ggplot(data=(fichero), aes_string(x=(colnames(fichero)[3]), y=(colnames(fichero)[2]), group="Date.Time")) + geom_line()
+sp + facet_wrap( ~ Date.Time, ncol=3)
+p <- ggplotly()
+ggsave(filename="myPlot14.png")
