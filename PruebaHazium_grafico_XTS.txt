@@ -1,0 +1,58 @@
+En ECI  
+======
+
+
+setwd=("C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016")
+
+ficheroHazium_0 <- read.csv(file="C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016/f1z8a-MC2.csv", sep = ",")
+
+ficheroHazium <- (ficheroHazium_0[,c(1,2)])			<---  Hazium concentration
+				
+
+
+PLOT 
+====
+				
+plot(ficheroHazium_0, type="l", xlab="Date.Time", ylab="F_1_Z_8A..Hazium.Concentration")
+
+
+
+
+
+Grafica con fichero Lights
+==========================
+
+setwd=("C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016")
+
+fichero1 <- read.csv(file="C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016/bldg-MC2.csv", sep = ",")
+ficheroLightsGraficoC1_14 <- (fichero1[,c(1,14)]) 
+
+plot(ficheroLightsGraficoC1_14, type="l", xlab="Date.Time", ylab="F_1_Z_1..Lights.Power")
+
+
+
+
+Series Temporales
+=================
+
+setwd=("C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016")
+PRUEBA_XTS <- as.xts(read.zoo("C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016/f1z8a-MC2.csv", header = T , sep = ","))
+
+install.packages('RMySQL')
+install.packages('DMwR')
+installed.packages()
+library()
+old.packages()
+update.packages()
+
+
+
+Prueba 2 (Light) - Series Temporales
+====================================
+
+setwd=("C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016")
+PRUEBA_XTS_2 <- as.xts(read.zoo("C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016/bldg-MC2.csv", header = T , sep = ","))
+
+
+
+plot(PRUEBA_XTS_2, type="l", xlab="Date.Time", ylab="F_1_Z_1..Lights.Power")

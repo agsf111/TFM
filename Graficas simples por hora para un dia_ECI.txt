@@ -1,0 +1,27 @@
+### setwd=("C:/Users/agsf111/Desktop/TFM - MC2 2016/Documentos tecnicos - Google scholar/ggplot2")
+setwd=("C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016")
+
+install.packages("reshape")
+library(reshape)
+
+install.packages("ggplot2")
+library(ggplot2)
+
+
+fichero1 <- read.csv(file="C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016/bldg-MC2.csv", header=T, sep = ",")
+fichero413 <- (fichero1[,c(1,413)])	
+fichero413$Date.Time = as.POSIXct(fichero413$Date.Time, format="%Y-%m-%d %H:%M:%S",tz="CET")
+fichero413$hour<- as.numeric(format(fichero413$Date.Time, format="%H"))
+fichero413$Date.Time<- format(fichero413$Date.Time, format="%Y-%m-%d %H")
+fichero <-melt (fichero413, c("Date.Time"))
+fichero <-cast (fichero, Date.Time~variable, mean)
+
+fichero$Date.Time = as.POSIXct(fichero$Date.Time, format="%Y-%m-%d",tz="CET")
+
+
+
+
+
+ggplot(data=(fichero[grep("2016-05-31", fichero$Date.Time), ]), aes(x=hour, y=F_3_Z_11B.SUPPLY.INLET.Mass.Flow.Rate, group=Date.Time)) + geom_line()
+
+ggplot(data=(fichero), aes(x=hour, y=F_3_Z_11B.SUPPLY.INLET.Mass.Flow.Rate, group=Date.Time)) + geom_line()

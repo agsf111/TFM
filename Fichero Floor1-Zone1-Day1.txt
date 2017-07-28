@@ -1,0 +1,80 @@
+
+setwd=("C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016")
+
+install.packages("dtw")
+library(dtw)
+
+
+pr1 <- read.csv(file="C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016/bldg-MC2.csv", header=T, sep = ",")
+pr2 <- (pr1[,c(1,286:287)])
+
+write.csv(pr2, file = "C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016/pr1.csv", row.names=FALSE)
+
+pr2$DateTime = as.POSIXct(pr2$Date.Time, format="%Y-%m-%d %H:%M:%S",tz="CET")
+
+pr2 <- (pr2[,c(4,2:3)])
+
+head(pr2)
+
+
+
+install.packages("reshape")
+library(reshape)
+
+pr2$hour =strftime(pr2$DateTime, format = "%H:%M")
+pr2$DateTime<- as.numeric(format(pr2$DateTime, format="%d"))
+
+head(pr2)
+
+
+###   *****************************************************************
+
+
+###   Formato objetivo Floor3-Zone12-Day13
+
+
+pr2 <- melt(pr2, id=c("DateTime","hour"))
+
+pr2$variable <- gsub('..Lights.Power', '-', pr2$variable)
+
+pr2$variable <- gsub('F_', 'Floor', pr2$variable)
+
+pr2$variable <- gsub('_Z_', '-Zone', pr2$variable)
+
+
+pr2$new <- paste(pr2$variable, pr2$DateTime, sep="Day")
+
+head(pr2)
+
+pr2 <- (pr2[,c(5,2,4)])
+
+head(pr2)
+
+
+class(pr2[[1]])
+
+
+pr2 <- cast(pr2, hour~new, value='value')
+
+####################################
+
+
+
+res =dist(pr2, method="DTW")
+clusters = hclust(res)
+plot(clusters)
+
+
+
+
+
+****************
+
+
+
+pr2 <- cast(mdata, DateTime~hour, value=c('F_3_Z_1..Lights.Power','F_3_Z_2..Lights.Power','F_3_Z_3..Lights.Power',
+										'F_3_Z_5..Lights.Power','F_3_Z_6..Lights.Power','F_3_Z_7..Lights.Power',
+										'F_3_Z_8..Lights.Power','F_3_Z_9..Lights.Power','F_3_Z_10..Lights.Power',
+										'F_3_Z_11A..Lights.Power','F_3_Z_11B..Lights.Power','F_3_Z_11C..Lights.Power')
+										, fun.aggregate=mean)
+

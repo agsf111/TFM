@@ -1,0 +1,77 @@
+
+setwd=("C:/Users/agsf111/Desktop/TFM - MC2 2016/Documentos tecnicos - Google scholar/ggplot2")
+
+install.packages("dtw")
+library(dtw)
+
+pr1 <- read.csv(file="C:/Users/agsf111/Desktop/TFM - MC2 2016/Documentos tecnicos - Google scholar/ggplot2/bldg-MC2.csv", header=T, sep = ",")
+pr2 <- (pr1[,c(1,286)])
+
+write.csv(pr2, file = "C:/Users/agsf111/Desktop/TFM - MC2 2016/Documentos tecnicos - Google scholar/ggplot2/pr1.csv", row.names=FALSE)
+
+pr2$DateTime = as.POSIXct(pr2$Date.Time, format="%Y-%m-%d %H:%M:%S",tz="CET")
+
+pr2 <- (pr2[,c(3,2)])
+
+class(pr2[[1]])
+class(pr2[[2]])
+
+
+install.packages("reshape")
+library(reshape)
+
+
+pr2$hour =strftime(pr2$DateTime, format = "%H:%M")
+pr2$DateTime<- as.numeric(format(pr2$DateTime, format="%d"))
+pr2 <- cast(pr2,DateTime~hour, value='F_3_Z_1..Lights.Power')
+
+head(pr2)
+
+
+res =dist(pr2, method="DTW")
+clusters = hclust(res)
+plot(clusters)
+
+ 
+
+
+****************************************************************************************************
+****************************************************************************************************
+
+
+
+En ECI  (si lo ejecuto en la oficina)
+======
+
+setwd=("C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016")
+
+install.packages("dtw")
+library(dtw)
+
+
+pr1 <- read.csv(file="C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016/bldg-MC2.csv", header=T, sep = ",")
+pr2 <- (pr1[,c(1,310)])
+
+write.csv(pr2, file = "C:/ALBERTO/PERSONAL/UNIR/CUATRIMESTRE 2/Master ALL/TFM/TFM - VAST MC2 2016/pr1.csv", row.names=FALSE)
+
+pr2$DateTime = as.POSIXct(pr2$Date.Time, format="%Y-%m-%d %H:%M:%S",tz="CET")
+
+pr2 <- (pr2[,c(3,2)])
+
+class(pr2[[1]])
+class(pr2[[2]])
+
+install.packages("reshape")
+library(reshape)
+
+pr2$hour =strftime(pr2$DateTime, format = "%H:%M")
+pr2$DateTime<- as.numeric(format(pr2$DateTime, format="%d"))
+pr2 <- cast(pr2,DateTime~hour, value='F_3_Z_1..Thermostat.Temp')
+
+head(pr2)
+
+
+res =dist(pr2, method="DTW")
+clusters = hclust(res)
+plot(clusters)
+
